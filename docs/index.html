@@ -3,97 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monitor Climático</title>
+<title>Monitor Climático — ibel</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=Inconsolata:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:#0a0e13; --surface:#111720; --surface2:#192030;
-  --border:rgba(255,255,255,0.07); --border2:rgba(255,255,255,0.14);
-  --text:#dde4ef; --muted:#5a6880; --muted2:#8a98b0;
-  --chuva:#4da8ff; --tmax:#ff6b4a; --tmin:#60c4ff;
-  --verde:#3ecf6e; --amber:#f0a830; --danger:#e84040;
+  --marrom:      #3d1a0f;
+  --marrom-med:  #5c2d1a;
+  --marrom-claro:#8b4513;
+  --verde:       #7ac143;
+  --verde-med:   #5d9a2e;
+  --verde-escuro:#3d6b1a;
+  --laranja:     #e8621a;
+  --bege:        #c9b89a;
+  --bege-claro:  #f5f0e8;
+  --bege-suave:  #faf8f4;
+  --bg:          #ffffff;
+  --border:      #e8ddd0;
+  --border2:     #d4c4b0;
+  --text:        #2a1508;
+  --muted:       #7a5c48;
+  --muted2:      #a88c78;
+  --chuva:       #1a6ea8;
+  --tmax:        #c0392b;
+  --tmin:        #1a6ea8;
+  --ok-c:        #3d6b1a;
+  --at-c:        #a0600a;
+  --stop-c:      #c0392b;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg);color:var(--text);font-family:'Inconsolata',monospace;font-weight:300;min-height:100vh;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;min-height:100vh;}
 
 /* ── HEADER ── */
-header{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 2.5rem;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:20;}
-.logo{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:-0.02em;}
-.logo em{color:var(--chuva);font-style:normal;}
-#meta{font-size:0.68rem;color:var(--muted);letter-spacing:0.05em;}
+header{
+  background:var(--marrom);
+  padding:0 2.5rem;
+  display:flex;align-items:center;justify-content:space-between;
+  height:58px;position:sticky;top:0;z-index:20;
+}
+.logo{display:flex;align-items:center;gap:0.9rem;}
+.logo-esfera{
+  width:34px;height:34px;border-radius:50%;
+  background:var(--verde);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+/* bolinhas do logo ibel */
+.logo-esfera::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle, rgba(45,107,26,0.8) 2px, transparent 2px),
+    radial-gradient(circle, rgba(45,107,26,0.6) 1.5px, transparent 1.5px);
+  background-size:6px 6px, 4px 4px;
+  background-position:0 0, 3px 3px;
+}
+.logo-nome{
+  display:flex;flex-direction:column;gap:1px;
+}
+.logo-ibel{font-size:1.1rem;font-weight:600;color:#fff;letter-spacing:-0.01em;line-height:1;}
+.logo-sub{font-size:0.62rem;color:rgba(255,255,255,0.6);letter-spacing:0.05em;font-weight:300;}
+#meta{font-size:0.68rem;color:rgba(255,255,255,0.5);letter-spacing:0.04em;}
 
 /* ── HERO ── */
-.hero{padding:3rem 2.5rem 1.5rem;max-width:1200px;margin:0 auto;}
-.hero h1{font-family:'Syne',sans-serif;font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:700;line-height:1.1;letter-spacing:-0.03em;margin-bottom:0.6rem;}
-.hero h1 em{color:var(--chuva);font-style:normal;}
-.hero p{font-size:0.8rem;color:var(--muted2);line-height:1.75;max-width:500px;}
+.hero{
+  background: var(--bege-suave);
+  border-bottom:2px solid var(--verde);
+  padding:2.5rem 2.5rem 2rem;
+}
+.hero-inner{max-width:1200px;margin:0 auto;display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+.hero-texto h1{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(1.6rem,3vw,2.3rem);
+  color:var(--marrom);line-height:1.15;margin-bottom:0.5rem;
+}
+.hero-texto h1 em{color:var(--verde-escuro);font-style:normal;}
+.hero-texto p{font-size:0.82rem;color:var(--muted);line-height:1.75;max-width:520px;}
+.hero-badge{
+  background:var(--marrom);border-radius:8px;padding:0.75rem 1.25rem;
+  display:flex;flex-direction:column;align-items:flex-end;gap:0.2rem;
+  white-space:nowrap;
+}
+.hero-badge span{font-size:0.62rem;color:rgba(255,255,255,0.6);letter-spacing:0.06em;text-transform:uppercase;}
+.hero-badge strong{font-size:0.85rem;color:#fff;font-weight:500;}
 
-/* ── SEÇÃO LABEL ── */
-.bloco{max-width:1200px;margin:0 auto;padding:0 2.5rem;}
-.slabel{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:0.75rem;margin-bottom:0.9rem;}
+/* ── CONTEÚDO ── */
+.conteudo{max-width:1200px;margin:0 auto;padding:2rem 2.5rem 4rem;}
+.slabel{
+  font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--muted2);display:flex;align-items:center;gap:0.75rem;
+  margin-bottom:1rem;
+}
 .slabel::after{content:'';flex:1;height:1px;background:var(--border);}
 
 /* ── GRID ── */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin:0 2.5rem 3rem;border-radius:12px;overflow:hidden;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;margin-bottom:3rem;}
 
 /* ── CARD ── */
-.card{background:var(--surface);padding:1.4rem 1.5rem;cursor:pointer;text-decoration:none;color:inherit;display:block;transition:background 0.15s;animation:fadeUp 0.25s ease both;}
-.card:hover{background:var(--surface2);}
-.card-topo{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;}
-.card-nome{font-family:'Syne',sans-serif;font-size:1rem;font-weight:500;}
-.card-uf{font-size:0.6rem;letter-spacing:0.1em;color:var(--muted);background:rgba(255,255,255,0.05);border:1px solid var(--border2);border-radius:3px;padding:0.1rem 0.38rem;margin-top:0.2rem;}
-.seta{color:var(--chuva);opacity:0;transform:translateX(-4px);transition:all 0.15s;font-size:0.8rem;}
+.card{
+  background:var(--bg);border:1px solid var(--border);border-radius:10px;
+  padding:1.4rem 1.5rem;cursor:pointer;text-decoration:none;color:inherit;
+  display:block;transition:border-color 0.15s,box-shadow 0.15s;
+  animation:fadeUp 0.25s ease both;
+}
+.card:hover{border-color:var(--verde);box-shadow:0 3px 14px rgba(122,193,67,0.12);}
+.card-topo{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.1rem;}
+.card-nome{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--marrom);font-weight:400;}
+.card-uf{font-size:0.6rem;letter-spacing:0.1em;color:var(--muted2);background:var(--bege-suave);border:1px solid var(--border);border-radius:3px;padding:0.1rem 0.4rem;margin-top:0.2rem;}
+.seta{color:var(--verde);opacity:0;transform:translateX(-4px);transition:all 0.15s;font-size:0.85rem;}
 .card:hover .seta{opacity:1;transform:translateX(0);}
 
-/* tags de período */
-.ptags{display:flex;align-items:center;gap:0.4rem;margin-bottom:0.65rem;flex-wrap:wrap;}
+/* período tags */
+.ptags{display:flex;align-items:center;gap:0.4rem;margin-bottom:0.6rem;flex-wrap:wrap;}
 .ptag{font-size:0.58rem;letter-spacing:0.09em;text-transform:uppercase;padding:0.1rem 0.42rem;border-radius:3px;}
-.ptag.prev{color:var(--chuva);background:rgba(77,168,255,0.1);border:1px solid rgba(77,168,255,0.22);}
-.ptag.hist{color:var(--muted2);background:rgba(255,255,255,0.04);border:1px solid var(--border2);}
-.ptag-desc{font-size:0.6rem;color:var(--muted);}
+.ptag.prev{color:var(--chuva);background:rgba(26,110,168,0.08);border:1px solid rgba(26,110,168,0.2);}
+.ptag.hist{color:var(--muted2);background:var(--bege-suave);border:1px solid var(--border);}
+.ptag-desc{font-size:0.62rem;color:var(--muted2);}
 
-/* grade de métricas */
+/* métricas */
 .metricas{display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;margin-bottom:0.6rem;}
-.m{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px;padding:0.48rem 0.62rem;}
-.ml{font-size:0.57rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:0.16rem;}
+.m{background:var(--bege-suave);border:1px solid var(--border);border-radius:6px;padding:0.48rem 0.62rem;}
+.ml{font-size:0.58rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted2);margin-bottom:0.16rem;}
 .mv{font-size:1rem;font-weight:500;}
-.mv.c{color:var(--chuva);} .mv.x{color:var(--tmax);} .mv.n{color:var(--tmin);}
-.mini-barra{height:3px;background:rgba(255,255,255,0.06);border-radius:2px;margin-top:0.28rem;overflow:hidden;}
+.mv.c{color:var(--chuva);}.mv.x{color:var(--tmax);}.mv.n{color:var(--chuva);}
+.mv.nd{color:var(--muted2);font-weight:300;}
+.mini-barra{height:3px;background:var(--border);border-radius:2px;margin-top:0.28rem;overflow:hidden;}
 .mini-fill{height:100%;background:var(--chuva);border-radius:2px;}
 
-/* semáforo de campo */
-.campo{display:flex;align-items:center;gap:0.4rem;font-size:0.65rem;padding:0.28rem 0.52rem;border-radius:5px;margin-bottom:0.5rem;}
-.campo.ok  {color:var(--verde);background:rgba(62,207,110,0.07);border:1px solid rgba(62,207,110,0.18);}
-.campo.at  {color:var(--amber);background:rgba(240,168,48,0.08);border:1px solid rgba(240,168,48,0.2);}
-.campo.stop{color:var(--danger);background:rgba(232,64,64,0.08);border:1px solid rgba(232,64,64,0.2);}
+/* semáforo */
+.campo{display:flex;align-items:center;gap:0.4rem;font-size:0.66rem;padding:0.3rem 0.55rem;border-radius:5px;margin-bottom:0.5rem;}
+.campo.ok  {color:var(--ok-c);background:rgba(61,107,26,0.07);border:1px solid rgba(61,107,26,0.2);}
+.campo.at  {color:var(--at-c);background:rgba(160,96,10,0.07);border:1px solid rgba(160,96,10,0.2);}
+.campo.stop{color:var(--stop-c);background:rgba(192,57,43,0.07);border:1px solid rgba(192,57,43,0.2);}
 .cdot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
-.ok .cdot{background:var(--verde);} .at .cdot{background:var(--amber);} .stop .cdot{background:var(--danger);}
+.ok .cdot{background:var(--ok-c);}.at .cdot{background:var(--at-c);}.stop .cdot{background:var(--stop-c);}
 
-/* chips de fonte */
+/* chips fontes */
 .fontes{display:flex;flex-wrap:wrap;gap:0.28rem;}
-.fchip{font-size:0.56rem;letter-spacing:0.06em;color:var(--muted);background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:3px;padding:0.08rem 0.38rem;}
+.fchip{font-size:0.57rem;color:var(--muted2);background:var(--bege-suave);border:1px solid var(--border);border-radius:3px;padding:0.08rem 0.38rem;}
 
 /* ── SOBRE ── */
-.sobre{max-width:1200px;margin:0 auto;padding:0 2.5rem 4rem;}
-.sobre-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
-.sobre-bloco{background:var(--surface);padding:1.5rem;}
-.sobre-titulo{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:500;margin-bottom:0.75rem;color:var(--text);}
+.sobre-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;margin-bottom:3rem;}
+.sobre-bloco{background:var(--bege-suave);border:1px solid var(--border);border-radius:10px;padding:1.5rem;}
+.sobre-titulo{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--marrom);font-weight:400;margin-bottom:1rem;}
 .sobre-item{display:flex;align-items:flex-start;gap:0.6rem;margin-bottom:0.65rem;}
 .sobre-item:last-child{margin-bottom:0;}
-.si-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:0.45rem;}
-.si-dot.azul{background:var(--chuva);}
-.si-dot.verde{background:var(--verde);}
-.si-dot.amber{background:var(--amber);}
-.si-dot.danger{background:var(--danger);}
-.si-texto{font-size:0.76rem;color:var(--muted2);line-height:1.6;}
+.si-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:0.45rem;}
+.si-dot.v{background:var(--verde);}
+.si-dot.c{background:var(--chuva);}
+.si-dot.a{background:var(--laranja);}
+.si-dot.d{background:var(--stop-c);}
+.si-texto{font-size:0.78rem;color:var(--muted);line-height:1.65;}
 .si-texto strong{color:var(--text);font-weight:500;}
 
 /* ── FOOTER ── */
-footer{border-top:1px solid var(--border);padding:1.25rem 2.5rem;text-align:center;color:var(--muted);font-size:0.67rem;letter-spacing:0.05em;}
+footer{background:var(--marrom);padding:1.5rem 2.5rem;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-logo{display:flex;align-items:center;gap:0.6rem;}
+.footer-esfera{width:22px;height:22px;border-radius:50%;background:var(--verde);opacity:0.8;}
+.footer-nome{font-size:0.78rem;color:rgba(255,255,255,0.7);}
+.footer-nome strong{color:#fff;}
+footer p{font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:0.04em;}
 
-/* loading */
-.loading-state{color:var(--muted2);font-size:0.8rem;padding:3rem 2.5rem;}
+.loading{color:var(--muted2);font-size:0.85rem;padding:3rem 0;}
+.erro{color:var(--stop-c);font-size:0.82rem;padding:1rem;background:rgba(192,57,43,0.05);border:1px solid rgba(192,57,43,0.15);border-radius:6px;}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
 </style>
@@ -101,150 +173,131 @@ footer{border-top:1px solid var(--border);padding:1.25rem 2.5rem;text-align:cent
 <body>
 
 <header>
-  <div class="logo">Monitor<em>Clima</em></div>
+  <div class="logo">
+    <div class="logo-esfera"></div>
+    <div class="logo-nome">
+      <div class="logo-ibel">ibel</div>
+      <div class="logo-sub">Monitor Climático</div>
+    </div>
+  </div>
   <div id="meta">carregando...</div>
 </header>
 
 <div class="hero">
-  <h1>Monitoramento<br><em>climático</em> por localidade</h1>
-  <p>Previsão (16 dias) e histórico (7, 15 e 30 dias) para as regiões de operação. Dados coletados automaticamente toda segunda-feira.</p>
+  <div class="hero-inner">
+    <div class="hero-texto">
+      <h1>Monitoramento <em>climático</em><br>por localidade</h1>
+      <p>Previsão (16 dias) e histórico (7, 15 e 30 dias) para as regiões de operação do ibel. Dados coletados automaticamente toda segunda-feira.</p>
+    </div>
+    <div class="hero-badge" id="hero-badge" style="display:none;">
+      <span>última atualização</span>
+      <strong id="badge-data">—</strong>
+    </div>
+  </div>
 </div>
 
-<div class="bloco" style="margin-bottom:0.75rem;">
+<div class="conteudo">
   <div class="slabel">Localidades monitoradas</div>
-</div>
-<div id="grid" class="grid">
-  <div class="loading-state" style="grid-column:1/-1;padding:3rem;">Carregando localidades...</div>
-</div>
+  <div id="grid" class="grid">
+    <div class="loading">Carregando localidades...</div>
+  </div>
 
-<!-- SOBRE O SISTEMA -->
-<div class="sobre">
-  <div class="slabel" style="margin-bottom:0.9rem;">Sobre o sistema</div>
+  <div class="slabel">Sobre o sistema</div>
   <div class="sobre-grid">
 
     <div class="sobre-bloco">
       <div class="sobre-titulo">Como funciona</div>
-      <div class="sobre-item">
-        <div class="si-dot azul"></div>
-        <div class="si-texto">O robô roda <strong>toda segunda-feira às 6h</strong> automaticamente via GitHub Actions, sem precisar de nenhuma ação manual.</div>
-      </div>
-      <div class="sobre-item">
-        <div class="si-dot azul"></div>
-        <div class="si-texto">Para cada localidade, coleta dados de previsão (próximos 16 dias) e histórico (últimos 35 dias) de múltiplas fontes.</div>
-      </div>
-      <div class="sobre-item">
-        <div class="si-dot azul"></div>
-        <div class="si-texto">Os dados são armazenados no repositório GitHub e o dashboard é atualizado automaticamente após a coleta.</div>
-      </div>
+      <div class="sobre-item"><div class="si-dot v"></div><div class="si-texto">O robô coleta dados automaticamente <strong>toda segunda-feira às 6h</strong> via GitHub Actions, sem necessidade de ação manual.</div></div>
+      <div class="sobre-item"><div class="si-dot v"></div><div class="si-texto">Para cada localidade, são coletados previsão (16 dias) e histórico (35 dias) de múltiplas fontes independentes.</div></div>
+      <div class="sobre-item"><div class="si-dot v"></div><div class="si-texto">Os dados ficam no GitHub e o dashboard é atualizado automaticamente após cada coleta.</div></div>
     </div>
 
     <div class="sobre-bloco">
-      <div class="sobre-titulo">Bases de dados — Previsão</div>
-      <div class="sobre-item">
-        <div class="si-dot azul"></div>
-        <div class="si-texto"><strong>Open-Meteo</strong> — Fonte principal. API gratuita e open-source que integra modelos globais (GFS, ICON, ERA5). Resolução de 5–11 km. Previsão de até 16 dias.</div>
-      </div>
-      <div class="sobre-item">
-        <div class="si-dot amber"></div>
-        <div class="si-texto"><strong>Climatempo</strong> — Fonte secundária de validação cruzada. 30 anos de operação no Brasil, utiliza modelo europeu ECMWF. Previsão de até 15 dias.</div>
-      </div>
+      <div class="sobre-titulo">Fontes de previsão</div>
+      <div class="sobre-item"><div class="si-dot c"></div><div class="si-texto"><strong>ECMWF IFS (9 km)</strong> — Modelo europeu, o mais preciso globalmente para precipitação tropical. Aberto em out/2025.</div></div>
+      <div class="sobre-item"><div class="si-dot c"></div><div class="si-texto"><strong>GFS / ICON</strong> — Modelos americano e alemão usados para avaliar convergência entre previsões.</div></div>
+      <div class="sobre-item"><div class="si-dot a"></div><div class="si-texto"><strong>Climatempo</strong> — Fonte brasileira com validação humana de meteorologistas. Complemento regional.</div></div>
     </div>
 
     <div class="sobre-bloco">
-      <div class="sobre-titulo">Bases de dados — Histórico</div>
-      <div class="sobre-item">
-        <div class="si-dot verde"></div>
-        <div class="si-texto"><strong>INMET</strong> — Dados observados de estações físicas nos municípios. Fonte prioritária onde disponível. Estações: A213 (Tomé-Açu), A215 (Marajó leste), A325 (S.R. Nonato), A341 (Picos), A253 (Altamira).</div>
-      </div>
-      <div class="sobre-item">
-        <div class="si-dot azul"></div>
-        <div class="si-texto"><strong>ERA5 / ECMWF</strong> — Reanálise climática global do Centro Europeu de Previsão. Resolução de 9 km, disponível desde 1950. Usado como fallback onde não há estação INMET.</div>
-      </div>
+      <div class="sobre-titulo">Fontes de histórico</div>
+      <div class="sobre-item"><div class="si-dot v"></div><div class="si-texto"><strong>INMET</strong> — Estações físicas nos municípios. Dado observado real, prioritário onde disponível. Estações: A213, A215, A325, A341, A253.</div></div>
+      <div class="sobre-item"><div class="si-dot c"></div><div class="si-texto"><strong>ERA5 / ECMWF</strong> — Reanálise climática global (9 km, desde 1950). Usado onde não há estação física próxima.</div></div>
     </div>
 
     <div class="sobre-bloco">
       <div class="sobre-titulo">Semáforo de campo</div>
-      <div class="sobre-item">
-        <div class="si-dot verde"></div>
-        <div class="si-texto"><strong>Favorável</strong> — Chuva prevista abaixo de 10 mm. Condições adequadas para operações com máquinas pesadas.</div>
-      </div>
-      <div class="sobre-item">
-        <div class="si-dot amber"></div>
-        <div class="si-texto"><strong>Atenção</strong> — Acumulado entre 10 mm e 20 mm. Chuva contínua pode comprometer a sustentação do solo para tratores. Avaliar antes de operar.</div>
-      </div>
-      <div class="sobre-item">
-        <div class="si-dot danger"></div>
-        <div class="si-texto"><strong>Pausa recomendada</strong> — Acumulado acima de 20 mm. Risco elevado de atolamento, derrapagem e compactação excessiva do solo. Paralisar máquinas pesadas.</div>
-      </div>
+      <div class="sobre-item"><div class="si-dot v"></div><div class="si-texto"><strong>Favorável</strong> — Chuva prevista abaixo de 10 mm. Condições adequadas para máquinas pesadas.</div></div>
+      <div class="sobre-item"><div class="si-dot a"></div><div class="si-texto"><strong>Atenção</strong> — Entre 10 mm e 20 mm. Solo pode perder sustentação para tratores. Avaliar antes de operar.</div></div>
+      <div class="sobre-item"><div class="si-dot d"></div><div class="si-texto"><strong>Pausa recomendada</strong> — Acima de 20 mm. Risco elevado de atolamento e compactação. Paralisar máquinas pesadas.</div></div>
     </div>
 
   </div>
 </div>
 
-<footer>Open-Meteo · Climatempo · INMET · ERA5/ECMWF &nbsp;·&nbsp; Uso interno &nbsp;·&nbsp; Atualização semanal automática</footer>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="footer-esfera"></div>
+      <div class="footer-nome"><strong>ibel</strong> · instituto belterra</div>
+    </div>
+    <p>Open-Meteo · ECMWF · Climatempo · INMET · ERA5 · Atualização semanal automática</p>
+  </div>
+</footer>
 
 <script>
-const fmt = (v, s='', d=1) => v != null ? (+v).toFixed(d) + s : '—';
-const meses = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
-const fmtDt = s => { if(!s) return '—'; const [,m,d] = s.split('-'); return `${+d} ${meses[+m-1]}`; };
+const fmt = (v,s='',d=1) => v!=null&&isFinite(+v) ? (+v).toFixed(d)+s : '—';
+const meses=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
 
-function avaliarCampo(chuva_mm) {
-  if (chuva_mm == null) return null;
-  if (chuva_mm >= 20) return { cls:'stop', txt:'Pausa recomendada — acima de 20 mm' };
-  if (chuva_mm >= 10) return { cls:'at',   txt:'Atenção — entre 10 mm e 20 mm' };
-  return { cls:'ok', txt:'Favorável para operações em campo' };
-}
-
-// pior dia nos próximos 7 dias de previsão
-function piorDia7(dias) {
-  if (!dias) return null;
-  const j7 = dias.slice(0, 7);
-  const max = Math.max(...j7.map(d => d.chuva_mm || 0));
-  return max;
+function avaliarCampo(mm) {
+  if(mm==null) return null;
+  if(mm>=20) return {cls:'stop', txt:'Pausa recomendada — acima de 20 mm'};
+  if(mm>=10) return {cls:'at',   txt:'Atenção — entre 10 mm e 20 mm'};
+  return {cls:'ok', txt:'Favorável para operações em campo'};
 }
 
 async function tryFetch(url) {
-  try { const r = await fetch(url); return r.ok ? r.json() : null; } catch { return null; }
+  try{const r=await fetch(url);return r.ok?r.json():null;}catch{return null;}
 }
 
 async function carregar() {
   const idx = await tryFetch('data/index.json');
-  if (!idx) {
-    document.getElementById('grid').innerHTML = '<div style="padding:3rem;color:#e84040;font-size:0.8rem;">Erro ao carregar dados. Verifique se o robô já rodou ao menos uma vez.</div>';
-    document.getElementById('meta').textContent = 'dados não disponíveis';
+  if(!idx){
+    document.getElementById('grid').innerHTML='<div class="erro">Erro ao carregar dados. Execute o robô de coleta ao menos uma vez.</div>';
+    document.getElementById('meta').textContent='dados não disponíveis';
     return;
   }
-
   const dt = new Date(idx.atualizado_em);
-  document.getElementById('meta').textContent = 'Atualizado em ' + dt.toLocaleDateString('pt-BR', {day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  const dtStr = dt.toLocaleDateString('pt-BR',{day:'2-digit',month:'short',year:'numeric'});
+  const hrStr = dt.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+  document.getElementById('meta').textContent = dtStr + ' · ' + hrStr;
+  const badge = document.getElementById('hero-badge');
+  badge.style.display='flex';
+  document.getElementById('badge-data').textContent = dtStr;
 
   const grid = document.getElementById('grid');
-  grid.innerHTML = '';
+  grid.innerHTML='';
 
-  for (const [i, loc] of idx.localidades.entries()) {
-    const [resumos, prev] = await Promise.all([
+  for(const [i,loc] of idx.localidades.entries()) {
+    const [resumos,prev] = await Promise.all([
       tryFetch(`data/${loc.id}/resumos.json`),
       tryFetch(`data/${loc.id}/previsao_openmeteo.json`),
     ]);
-
-    // Dados históricos (últimos 7 dias)
     const h7 = resumos?.ultimos_7_dias;
-    // Dados previsão próximos 7 dias
-    const p7_chuva = prev ? piorDia7(prev.dias) : null;
-    const p7_tmax  = prev ? Math.max(...prev.dias.slice(0,7).map(d=>d.temp_max_c||0)) : null;
-    const p7_tmin  = prev ? Math.min(...prev.dias.slice(0,7).filter(d=>d.temp_min_c!=null).map(d=>d.temp_min_c)) : null;
-    const p7_total = prev ? prev.dias.slice(0,7).reduce((s,d)=>s+(d.chuva_mm||0),0) : null;
+    const p7 = prev?.dias?.slice(0,7)||[];
+    const p7_max   = p7.length ? Math.max(...p7.map(d=>d.chuva_mm||0)) : null;
+    const p7_total = p7.length ? p7.reduce((s,d)=>s+(d.chuva_mm||0),0) : null;
+    const p7_tmax  = p7.length ? Math.max(...p7.filter(d=>d.temp_max_c!=null).map(d=>d.temp_max_c)) : null;
+    const p7_tmin  = p7.length ? Math.min(...p7.filter(d=>d.temp_min_c!=null).map(d=>d.temp_min_c)) : null;
 
-    const campo = avaliarCampo(p7_chuva);
-    const maxChuvaRef = 150;
-    const barraPct = h7?.chuva_total_mm ? Math.min(h7.chuva_total_mm / maxChuvaRef * 100, 100) : 0;
+    const campo = avaliarCampo(p7_max);
+    const barraPct = h7?.chuva_total_mm ? Math.min(h7.chuva_total_mm/150*100,100) : 0;
 
     const card = document.createElement('a');
-    card.className = 'card';
-    card.href = `localidade.html?id=${loc.id}`;
-    card.style.animationDelay = `${i * 0.05}s`;
-
-    card.innerHTML = `
+    card.className='card';
+    card.href=`localidade.html?id=${loc.id}`;
+    card.style.animationDelay=`${i*0.05}s`;
+    card.innerHTML=`
       <div class="card-topo">
         <div>
           <div class="card-nome">${loc.nome}</div>
@@ -252,64 +305,26 @@ async function carregar() {
         </div>
         <div class="seta">→</div>
       </div>
-
-      <div class="ptags">
-        <span class="ptag hist">Histórico</span>
-        <span class="ptag-desc">últimos 7 dias</span>
-      </div>
+      <div class="ptags"><span class="ptag hist">Histórico</span><span class="ptag-desc">últimos 7 dias</span></div>
       <div class="metricas">
-        <div class="m">
-          <div class="ml">Chuva total</div>
-          <div class="mv c">${fmt(h7?.chuva_total_mm,' mm')}</div>
-          <div class="mini-barra"><div class="mini-fill" style="width:${barraPct}%"></div></div>
-        </div>
-        <div class="m">
-          <div class="ml">Temp. máx.</div>
-          <div class="mv x">${fmt(h7?.temp_max_periodo_c,' °C')}</div>
-        </div>
-        <div class="m">
-          <div class="ml">Dias c/ chuva</div>
-          <div class="mv" style="color:var(--muted2)">${h7?.dias_com_chuva ?? '—'}</div>
-        </div>
-        <div class="m">
-          <div class="ml">Temp. mín.</div>
-          <div class="mv n">${fmt(h7?.temp_min_periodo_c,' °C')}</div>
-        </div>
+        <div class="m"><div class="ml">Chuva total</div><div class="mv c">${fmt(h7?.chuva_total_mm,' mm')}</div><div class="mini-barra"><div class="mini-fill" style="width:${barraPct}%"></div></div></div>
+        <div class="m"><div class="ml">Temp. máx.</div><div class="mv x">${fmt(h7?.temp_max_periodo_c,' °C')}</div></div>
+        <div class="m"><div class="ml">Dias c/ chuva</div><div class="mv ${h7?.dias_com_chuva!=null?'':'nd'}">${h7?.dias_com_chuva??'—'}</div></div>
+        <div class="m"><div class="ml">Temp. mín.</div><div class="mv n">${fmt(h7?.temp_min_periodo_c,' °C')}</div></div>
       </div>
-
-      <div class="ptags" style="margin-top:0.5rem;">
-        <span class="ptag prev">Previsão</span>
-        <span class="ptag-desc">próximos 7 dias</span>
-      </div>
+      <div class="ptags" style="margin-top:0.4rem;"><span class="ptag prev">Previsão</span><span class="ptag-desc">próximos 7 dias</span></div>
       <div class="metricas">
-        <div class="m">
-          <div class="ml">Chuva acum.</div>
-          <div class="mv c">${fmt(p7_total,' mm')}</div>
-        </div>
-        <div class="m">
-          <div class="ml">Temp. máx.</div>
-          <div class="mv x">${p7_tmax ? fmt(p7_tmax,' °C') : '—'}</div>
-        </div>
-        <div class="m">
-          <div class="ml">Maior dia</div>
-          <div class="mv c">${fmt(p7_chuva,' mm')}</div>
-        </div>
-        <div class="m">
-          <div class="ml">Temp. mín.</div>
-          <div class="mv n">${p7_tmin!=null && isFinite(p7_tmin) ? fmt(p7_tmin,' °C') : '—'}</div>
-        </div>
+        <div class="m"><div class="ml">Chuva acum.</div><div class="mv c">${fmt(p7_total,' mm')}</div></div>
+        <div class="m"><div class="ml">Temp. máx.</div><div class="mv x">${p7_tmax!=null&&isFinite(p7_tmax)?fmt(p7_tmax,' °C'):'—'}</div></div>
+        <div class="m"><div class="ml">Maior dia</div><div class="mv c">${fmt(p7_max,' mm')}</div></div>
+        <div class="m"><div class="ml">Temp. mín.</div><div class="mv n">${p7_tmin!=null&&isFinite(p7_tmin)?fmt(p7_tmin,' °C'):'—'}</div></div>
       </div>
-
-      ${campo ? `<div class="campo ${campo.cls}"><div class="cdot"></div>${campo.txt}</div>` : ''}
-
-      <div class="fontes">
-        ${(loc.fontes||['Open-Meteo']).map(f=>`<span class="fchip">${f}</span>`).join('')}
-      </div>
+      ${campo?`<div class="campo ${campo.cls}"><div class="cdot"></div>${campo.txt}</div>`:''}
+      <div class="fontes">${(loc.fontes||['Open-Meteo']).map(f=>`<span class="fchip">${f}</span>`).join('')}</div>
     `;
     grid.appendChild(card);
   }
 }
-
 carregar();
 </script>
 </body>
