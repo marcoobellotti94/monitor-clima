@@ -56,9 +56,13 @@ LOCALIDADES = [
 # Modelos para comparação de convergência
 # ECMWF IFS (melhor global), GFS (americano), ICON (alemão) — todos gratuitos via Open-Meteo
 MODELOS_COMPARACAO = [
+    # Parâmetros corretos da API Open-Meteo para modelos globais
+    # ECMWF IFS: modelo europeu, melhor para trópicos, 9 km, open data desde out/2025
     {"id": "ecmwf_ifs", "nome": "ECMWF IFS", "param": "ecmwf_ifs"},
-    {"id": "gfs",       "nome": "GFS",        "param": "gfs025"},
-    {"id": "icon",      "nome": "ICON",       "param": "icon_global"},
+    # GFS: modelo americano NOAA, 25 km, prefixo ncep_ obrigatório
+    {"id": "gfs",       "nome": "GFS",        "param": "ncep_gfs025"},
+    # ICON: modelo alemão DWD, 11 km, prefixo dwd_ obrigatório
+    {"id": "icon",      "nome": "ICON",       "param": "dwd_icon"},
 ]
 
 CLIMATEMPO_TOKEN = os.environ.get("CLIMATEMPO_TOKEN", "")
@@ -129,10 +133,11 @@ def coletar_previsao_openmeteo(loc):
 # Coleta ECMWF IFS, GFS e ICON separadamente via Open-Meteo
 # ─────────────────────────────────────────────────────────────────
 
-def coletar_modelos_comparacao(loc):
+def coletar_modelos_comparacao(loc, prev_ct=None):
     """
     Retorna dicionário com previsão de chuva diária de cada modelo
     para os próximos 10 dias. Usado para calcular convergência.
+    Inclui Climatempo como 4ª fonte quando disponível.
     """
     resultados = {}
 
@@ -160,6 +165,22 @@ def coletar_modelos_comparacao(loc):
             "dias": dias,
         }
         print(f"  [OK] Modelo {modelo['nome']}: {len(dias)} dias")
+
+    # Adiciona Climatempo como 4ª fonte quando disponível
+    if prev_ct and prev_ct.get("dias"):
+        ct_dias = []
+        for d in prev_ct["dias"][:10]:
+            ct_dias.append({
+                "data": d.get("data", ""),
+                "chuva_mm": d.get("chuva_mm"),
+                "temp_max_c": d.get("temp_max_c"),
+                "temp_min_c": d.get("temp_min_c"),
+            })
+        resultados["climatempo"] = {
+            "nome": "Climatempo",
+            "dias": ct_dias,
+        }
+        print(f"  [OK] Climatempo adicionado à comparação: {len(ct_dias)} dias")
 
     if not resultados:
         return None
@@ -427,17 +448,17 @@ def main():
         if prev_om:
             salvar_json(f"{base}/previsao_openmeteo.json", prev_om)
 
-        # Comparação de modelos (ECMWF, GFS, ICON)
-        print("  Comparação de modelos (ECMWF / GFS / ICON)...")
-        modelos = coletar_modelos_comparacao(loc)
-        if modelos:
-            salvar_json(f"{base}/modelos_comparacao.json", modelos)
-
-        # Climatempo
+        # Climatempo — coletado antes dos modelos para poder incluir na comparação
         print("  Climatempo...")
         prev_ct = coletar_previsao_climatempo(loc)
         if prev_ct:
             salvar_json(f"{base}/previsao_climatempo.json", prev_ct)
+
+        # Comparação de modelos (ECMWF IFS / GFS / ICON / Climatempo)
+        print("  Comparação de modelos (ECMWF IFS / GFS / ICON / Climatempo)...")
+        modelos = coletar_modelos_comparacao(loc, prev_ct)
+        if modelos:
+            salvar_json(f"{base}/modelos_comparacao.json", modelos)
 
         # Histórico ERA5
         print("  Histórico ERA5...")
