@@ -56,13 +56,11 @@ LOCALIDADES = [
 # Modelos para comparação de convergência
 # ECMWF IFS (melhor global), GFS (americano), ICON (alemão) — todos gratuitos via Open-Meteo
 MODELOS_COMPARACAO = [
-    # Parâmetros corretos da API Open-Meteo para modelos globais
-    # ECMWF IFS: modelo europeu, melhor para trópicos, 9 km, open data desde out/2025
-    {"id": "ecmwf_ifs", "nome": "ECMWF IFS", "param": "ecmwf_ifs"},
-    # GFS: modelo americano NOAA, 25 km, prefixo ncep_ obrigatório
-    {"id": "gfs",       "nome": "GFS",        "param": "ncep_gfs025"},
-    # ICON: modelo alemão DWD, 11 km, prefixo dwd_ obrigatório
-    {"id": "icon",      "nome": "ICON",       "param": "dwd_icon"},
+    # Nomes corretos para o parâmetro models= no endpoint /v1/forecast do Open-Meteo
+    # "seamless" combina automaticamente as variantes do modelo (global + regional)
+    {"id": "ecmwf_ifs",    "nome": "ECMWF IFS", "param": "ecmwf_ifs"},
+    {"id": "gfs",          "nome": "GFS",        "param": "gfs_seamless"},
+    {"id": "icon",         "nome": "ICON",       "param": "icon_seamless"},
 ]
 
 CLIMATEMPO_TOKEN = os.environ.get("CLIMATEMPO_TOKEN", "")
