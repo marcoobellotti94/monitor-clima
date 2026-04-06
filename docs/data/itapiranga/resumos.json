@@ -289,11 +289,6 @@
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Itapiranga",
   "estado": "AM",
-  "atualizado_em": "2026-04-06T14:56:02.794800",
-  "proxima_semana": {
-    "chuva_total_mm": 47.7,
-    "dias_com_chuva": 7,
-    "temp_max_c": 31.9,
-    "fonte": "Open-Meteo"
-  }
+  "atualizado_em": "2026-04-06T21:53:49.352059",
+  "proxima_semana": {}
 }

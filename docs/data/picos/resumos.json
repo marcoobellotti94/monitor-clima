@@ -289,11 +289,11 @@
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Picos",
   "estado": "PI",
-  "atualizado_em": "2026-04-06T14:56:02.794800",
+  "atualizado_em": "2026-04-06T21:53:49.352059",
   "proxima_semana": {
-    "chuva_total_mm": 14.9,
-    "dias_com_chuva": 2,
-    "temp_max_c": 33.6,
+    "chuva_total_mm": 15.3,
+    "dias_com_chuva": 4,
+    "temp_max_c": 33.0,
     "fonte": "Open-Meteo"
   }
 }
