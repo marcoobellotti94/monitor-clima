@@ -199,6 +199,71 @@ function rmCard(titulo,d){
   </div>`;
 }
 
+
+function renderConvergencia(modelos) {
+  const conv = modelos?.convergencia;
+  if (!conv || conv.length === 0) return '';
+
+  const nomes = modelos?.modelos || {};
+  const modeloIds = Object.keys(modelos?.dias_por_modelo || {});
+  if (modeloIds.length < 2) return '';
+
+  const linhas = conv.slice(0, 10).map(dia => {
+    if (!dia.valores) return '';
+    const cls = dia.nivel === 'boa' ? 'conv-boa' : dia.nivel === 'moderada' ? 'conv-mod' : 'conv-baixa';
+    const icone = dia.nivel === 'boa' ? '●●●●' : dia.nivel === 'moderada' ? '●●●○' : '●●○○';
+    const corIcone = dia.nivel === 'boa' ? 'var(--ok-c)' : dia.nivel === 'moderada' ? 'var(--at-c)' : 'var(--stop-c)';
+    const vals = modeloIds.map(mid => {
+      const v = dia.valores[mid];
+      return `<td style="text-align:right;font-size:0.75rem;">${v!=null?v.toFixed(1):'—'}</td>`;
+    }).join('');
+    return `<tr>
+      <td>${fmtD(dia.data)}</td>
+      ${vals}
+      <td style="text-align:right;color:var(--muted2);font-size:0.75rem;">${dia.media_mm!=null?dia.media_mm.toFixed(1):'—'}</td>
+      <td style="text-align:right;color:var(--muted2);font-size:0.75rem;">±${dia.desvio_mm!=null?dia.desvio_mm.toFixed(1):'—'}</td>
+      <td style="text-align:right;font-size:0.68rem;color:${corIcone};">${icone}</td>
+    </tr>`;
+  }).join('');
+
+  const cabecalhos = modeloIds.map(mid => {
+    const n = nomes[mid]?.nome || mid;
+    return `<th style="text-align:right">${n}</th>`;
+  }).join('');
+
+  return `
+    <div class="chart-card" style="margin-bottom:1.5rem;">
+      <div class="chart-titulo">Convergência entre modelos — chuva prevista (mm)</div>
+      <div class="chart-sub">Quando os modelos concordam, a previsão é mais confiável. Alta divergência = aguardar atualização.</div>
+      <div style="overflow:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.75rem;">
+          <thead>
+            <tr>
+              <th style="text-align:left;padding:0.5rem 0.6rem;font-size:0.6rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted2);border-bottom:1px solid var(--border);">Data</th>
+              ${cabecalhos}
+              <th style="text-align:right;padding:0.5rem 0.6rem;font-size:0.6rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted2);border-bottom:1px solid var(--border);">Média</th>
+              <th style="text-align:right;padding:0.5rem 0.6rem;font-size:0.6rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted2);border-bottom:1px solid var(--border);">Variação</th>
+              <th style="text-align:right;padding:0.5rem 0.6rem;font-size:0.6rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted2);border-bottom:1px solid var(--border);">Confiança</th>
+            </tr>
+          </thead>
+          <tbody>${linhas}</tbody>
+        </table>
+      </div>
+      <div style="margin-top:0.75rem;display:flex;gap:1.25rem;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.65rem;color:var(--muted);">
+          <span style="color:var(--ok-c)">●●●●</span> Alta — modelos convergem (variação &lt;5mm)
+        </div>
+        <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.65rem;color:var(--muted);">
+          <span style="color:var(--at-c)">●●●○</span> Moderada — variação 5–15mm
+        </div>
+        <div style="display:flex;align-items:center;gap:0.4rem;font-size:0.65rem;color:var(--muted);">
+          <span style="color:var(--stop-c)">●●○○</span> Baixa — modelos divergem (&gt;15mm), aguardar
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 async function init(){
   if(!LOC_ID){document.getElementById('main').innerHTML='<div class="aviso">Parâmetro ausente.</div>';return;}
   const base=`data/${LOC_ID}`;
@@ -235,7 +300,10 @@ async function init(){
   renderHistorico(histERA5,histINMET,resumos,locInfo);
 }
 
-function renderPrevisao(om,ct,locInfo){
+async function renderPrevisao(om,ct,locInfo){
+  // Carrega dados de convergência de modelos
+  const modelos = await tryFetch(`data/${LOC_ID}/modelos_comparacao.json`);
+
   const el=document.getElementById('painel-previsao');
   if(!om){el.innerHTML='<div class="aviso">Dados de previsão não disponíveis. Execute o robô de coleta.</div>';return;}
   const dias=om.dias.slice(0,16);
@@ -307,6 +375,9 @@ function renderPrevisao(om,ct,locInfo){
       </div>
       <div class="semaforo-row">${sem7}</div>
     </div>
+
+
+    ${modelos ? renderConvergencia(modelos) : ''}
 
     <div class="tabela-card">
       <div style="padding:1rem 1.25rem 0.5rem;font-family:'DM Serif Display',serif;font-size:0.9rem;color:var(--marrom);">Detalhamento diário</div>
