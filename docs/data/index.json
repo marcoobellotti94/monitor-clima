@@ -1,0 +1,77 @@
+{
+  "atualizado_em": "2026-04-06T14:18:23.849547",
+  "localidades": [
+    {
+      "id": "tome_acu",
+      "nome": "Tomé-Açu",
+      "estado": "PA",
+      "lat": -2.418,
+      "lon": -48.151,
+      "tem_inmet": false,
+      "tem_climatempo": false
+    },
+    {
+      "id": "salvaterra",
+      "nome": "Salvaterra",
+      "estado": "PA",
+      "lat": -0.758,
+      "lon": -48.519,
+      "tem_inmet": false,
+      "tem_climatempo": false
+    },
+    {
+      "id": "soure",
+      "nome": "Soure",
+      "estado": "PA",
+      "lat": -0.716,
+      "lon": -48.521,
+      "tem_inmet": false,
+      "tem_climatempo": false
+    },
+    {
+      "id": "cachoeira_arari",
+      "nome": "Cachoeira do Arari",
+      "estado": "PA",
+      "lat": -1.003,
+      "lon": -48.958,
+      "tem_inmet": false,
+      "tem_climatempo": false
+    },
+    {
+      "id": "itapiranga",
+      "nome": "Itapiranga",
+      "estado": "AM",
+      "lat": -2.746,
+      "lon": -58.026,
+      "tem_inmet": false,
+      "tem_climatempo": false
+    },
+    {
+      "id": "sao_raimundo_nonato",
+      "nome": "São Raimundo Nonato",
+      "estado": "PI",
+      "lat": -9.012,
+      "lon": -42.697,
+      "tem_inmet": false,
+      "tem_climatempo": false
+    },
+    {
+      "id": "picos",
+      "nome": "Picos",
+      "estado": "PI",
+      "lat": -7.077,
+      "lon": -41.467,
+      "tem_inmet": true,
+      "tem_climatempo": false
+    },
+    {
+      "id": "altamira",
+      "nome": "Altamira",
+      "estado": "PA",
+      "lat": -3.204,
+      "lon": -52.208,
+      "tem_inmet": true,
+      "tem_climatempo": false
+    }
+  ]
+}
