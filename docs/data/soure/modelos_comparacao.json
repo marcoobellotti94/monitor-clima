@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-04-06T23:20:06.496105",
+  "coletado_em": "2026-04-06T23:31:52.447098",
   "modelos": {
     "ecmwf_ifs": {
       "nome": "ECMWF IFS"
@@ -82,63 +82,63 @@
       "dias": [
         {
           "data": "2026-04-06",
-          "chuva_mm": null,
-          "temp_max_c": null,
-          "temp_min_c": null
+          "chuva_mm": 25.8,
+          "temp_max_c": 28.8,
+          "temp_min_c": 22.6
         },
         {
           "data": "2026-04-07",
-          "chuva_mm": null,
-          "temp_max_c": null,
-          "temp_min_c": null
+          "chuva_mm": 9.6,
+          "temp_max_c": 29.2,
+          "temp_min_c": 23.2
         },
         {
           "data": "2026-04-08",
-          "chuva_mm": null,
-          "temp_max_c": null,
-          "temp_min_c": null
+          "chuva_mm": 2.6,
+          "temp_max_c": 29.9,
+          "temp_min_c": 24.6
         },
         {
           "data": "2026-04-09",
-          "chuva_mm": null,
-          "temp_max_c": null,
-          "temp_min_c": null
+          "chuva_mm": 13.1,
+          "temp_max_c": 29.0,
+          "temp_min_c": 23.5
         },
         {
           "data": "2026-04-10",
-          "chuva_mm": null,
-          "temp_max_c": null,
-          "temp_min_c": null
+          "chuva_mm": 6.6,
+          "temp_max_c": 28.2,
+          "temp_min_c": 23.3
         },
         {
           "data": "2026-04-11",
-          "chuva_mm": null,
-          "temp_max_c": null,
-          "temp_min_c": null
+          "chuva_mm": 5.6,
+          "temp_max_c": 28.7,
+          "temp_min_c": 23.3
         },
         {
           "data": "2026-04-12",
-          "chuva_mm": null,
-          "temp_max_c": null,
-          "temp_min_c": null
+          "chuva_mm": 3.3,
+          "temp_max_c": 28.3,
+          "temp_min_c": 23.2
         },
         {
           "data": "2026-04-13",
-          "chuva_mm": null,
-          "temp_max_c": null,
-          "temp_min_c": null
+          "chuva_mm": 3.0,
+          "temp_max_c": 28.7,
+          "temp_min_c": 23.0
         },
         {
           "data": "2026-04-14",
-          "chuva_mm": null,
-          "temp_max_c": null,
-          "temp_min_c": null
+          "chuva_mm": 3.3,
+          "temp_max_c": 29.3,
+          "temp_min_c": 23.5
         },
         {
           "data": "2026-04-15",
-          "chuva_mm": null,
-          "temp_max_c": null,
-          "temp_min_c": null
+          "chuva_mm": 3.0,
+          "temp_max_c": 29.2,
+          "temp_min_c": 23.7
         }
       ]
     },
@@ -211,108 +211,123 @@
   "convergencia": [
     {
       "data": "2026-04-06",
-      "media_mm": 12.7,
-      "desvio_mm": 4.2,
-      "nivel": "boa",
-      "n_modelos": 2,
+      "media_mm": 17.0,
+      "desvio_mm": 7.1,
+      "nivel": "moderada",
+      "n_modelos": 3,
       "valores": {
         "ecmwf_ifs": 16.8,
-        "gfs": 0,
+        "gfs": 25.8,
         "icon": 8.5
       }
     },
     {
       "data": "2026-04-07",
-      "media_mm": 4.5,
-      "desvio_mm": 2.2,
+      "media_mm": 6.2,
+      "desvio_mm": 3.0,
       "nivel": "boa",
-      "n_modelos": 2,
+      "n_modelos": 3,
       "valores": {
         "ecmwf_ifs": 6.7,
-        "gfs": 0,
+        "gfs": 9.6,
         "icon": 2.3
       }
     },
     {
       "data": "2026-04-08",
-      "media_mm": 9.6,
-      "desvio_mm": 6.2,
+      "media_mm": 7.3,
+      "desvio_mm": 6.0,
       "nivel": "moderada",
-      "n_modelos": 2,
+      "n_modelos": 3,
       "valores": {
         "ecmwf_ifs": 15.8,
-        "gfs": 0,
+        "gfs": 2.6,
         "icon": 3.4
       }
     },
     {
       "data": "2026-04-09",
-      "media_mm": 12.1,
-      "desvio_mm": 2.0,
+      "media_mm": 12.4,
+      "desvio_mm": 1.7,
       "nivel": "boa",
-      "n_modelos": 2,
+      "n_modelos": 3,
       "valores": {
         "ecmwf_ifs": 14.0,
-        "gfs": 0,
+        "gfs": 13.1,
         "icon": 10.1
       }
     },
     {
       "data": "2026-04-10",
-      "media_mm": 14.4,
-      "desvio_mm": 2.9,
+      "media_mm": 11.8,
+      "desvio_mm": 4.4,
       "nivel": "boa",
-      "n_modelos": 2,
+      "n_modelos": 3,
       "valores": {
         "ecmwf_ifs": 17.3,
-        "gfs": 0,
+        "gfs": 6.6,
         "icon": 11.5
       }
     },
     {
       "data": "2026-04-11",
-      "media_mm": 14.0,
-      "desvio_mm": 0.6,
+      "media_mm": 11.2,
+      "desvio_mm": 4.0,
       "nivel": "boa",
-      "n_modelos": 2,
+      "n_modelos": 3,
       "valores": {
         "ecmwf_ifs": 13.4,
-        "gfs": 0,
+        "gfs": 5.6,
         "icon": 14.6
       }
     },
     {
       "data": "2026-04-12",
-      "media_mm": 17.0,
-      "desvio_mm": 6.2,
+      "media_mm": 12.4,
+      "desvio_mm": 8.2,
       "nivel": "moderada",
-      "n_modelos": 2,
+      "n_modelos": 3,
       "valores": {
         "ecmwf_ifs": 23.2,
-        "gfs": 0,
+        "gfs": 3.3,
         "icon": 10.8
       }
     },
     {
       "data": "2026-04-13",
-      "media_mm": null,
-      "desvio_mm": null,
-      "nivel": "insuficiente",
-      "n_modelos": 1
+      "media_mm": 11.9,
+      "desvio_mm": 8.9,
+      "nivel": "moderada",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 20.8,
+        "gfs": 3.0,
+        "icon": 0
+      }
     },
     {
       "data": "2026-04-14",
-      "media_mm": null,
-      "desvio_mm": null,
-      "nivel": "insuficiente",
-      "n_modelos": 1
+      "media_mm": 10.6,
+      "desvio_mm": 7.3,
+      "nivel": "moderada",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 17.8,
+        "gfs": 3.3,
+        "icon": 0
+      }
     },
     {
       "data": "2026-04-15",
-      "media_mm": null,
-      "desvio_mm": null,
-      "nivel": "insuficiente",
-      "n_modelos": 1
+      "media_mm": 8.0,
+      "desvio_mm": 5.0,
+      "nivel": "moderada",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 13.0,
+        "gfs": 3.0,
+        "icon": 0
+      }
     }
   ]
 }
