@@ -1,0 +1,299 @@
+{
+  "ultimos_7_dias": {
+    "chuva_total_mm": 102.4,
+    "dias_com_chuva": 7,
+    "dias_chuva_intensa": 2,
+    "pct_chuva_concentrada": 51.9,
+    "temp_max_periodo_c": 31.2,
+    "temp_min_periodo_c": 22.5,
+    "temp_max_media_c": 30.0,
+    "umidade_media_pct": 98.1,
+    "vento_max_kmh": 17.3
+  },
+  "ultimos_15_dias": {
+    "chuva_total_mm": 265.1,
+    "dias_com_chuva": 15,
+    "dias_chuva_intensa": 4,
+    "pct_chuva_concentrada": 61.8,
+    "temp_max_periodo_c": 32.0,
+    "temp_min_periodo_c": 22.5,
+    "temp_max_media_c": 29.9,
+    "umidade_media_pct": 98.5,
+    "vento_max_kmh": 20.7
+  },
+  "ultimos_30_dias": {
+    "chuva_total_mm": 506.0,
+    "dias_com_chuva": 30,
+    "dias_chuva_intensa": 9,
+    "pct_chuva_concentrada": 60.5,
+    "temp_max_periodo_c": 32.0,
+    "temp_min_periodo_c": 22.5,
+    "temp_max_media_c": 29.6,
+    "umidade_media_pct": 98.6,
+    "vento_max_kmh": 23.5
+  },
+  "distribuicao_diaria": [
+    {
+      "data": "2026-02-25",
+      "chuva_mm": 20.6,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-02-26",
+      "chuva_mm": 11.8,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-02-27",
+      "chuva_mm": 6.4,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-02-28",
+      "chuva_mm": 26.9,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-01",
+      "chuva_mm": 11.8,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-02",
+      "chuva_mm": 4.0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-03-03",
+      "chuva_mm": 7.7,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-04",
+      "chuva_mm": 38.9,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-05",
+      "chuva_mm": 27.2,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-06",
+      "chuva_mm": 14.2,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-07",
+      "chuva_mm": 19.0,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-08",
+      "chuva_mm": 6.0,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-09",
+      "chuva_mm": 1.8,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-03-10",
+      "chuva_mm": 15.1,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-11",
+      "chuva_mm": 4.1,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-03-12",
+      "chuva_mm": 24.6,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-13",
+      "chuva_mm": 21.3,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-14",
+      "chuva_mm": 7.0,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-15",
+      "chuva_mm": 6.9,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-16",
+      "chuva_mm": 16.7,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-17",
+      "chuva_mm": 30.4,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-18",
+      "chuva_mm": 42.1,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-19",
+      "chuva_mm": 10.2,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-20",
+      "chuva_mm": 68.7,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-21",
+      "chuva_mm": 4.6,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-03-22",
+      "chuva_mm": 4.7,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-03-23",
+      "chuva_mm": 8.7,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-24",
+      "chuva_mm": 15.4,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-25",
+      "chuva_mm": 8.3,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-26",
+      "chuva_mm": 4.7,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-03-27",
+      "chuva_mm": 10.5,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-28",
+      "chuva_mm": 14.8,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-29",
+      "chuva_mm": 26.7,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-30",
+      "chuva_mm": 26.4,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-03-31",
+      "chuva_mm": 8.4,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-01",
+      "chuva_mm": 10.9,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    }
+  ],
+  "fonte_historico": "Open-Meteo / ERA5",
+  "localidade": "Cachoeira do Arari",
+  "estado": "PA",
+  "atualizado_em": "2026-04-06T14:40:39.053176",
+  "proxima_semana": {
+    "chuva_total_mm": 55.3,
+    "dias_com_chuva": 7,
+    "temp_max_c": 31.3,
+    "fonte": "Open-Meteo"
+  }
+}
