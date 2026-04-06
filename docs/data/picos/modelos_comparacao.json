@@ -1,8 +1,11 @@
 {
-  "coletado_em": "2026-04-06T22:09:28.383325",
+  "coletado_em": "2026-04-06T23:21:28.667345",
   "modelos": {
     "ecmwf_ifs": {
       "nome": "ECMWF IFS"
+    },
+    "gfs": {
+      "nome": "GFS"
     },
     "icon": {
       "nome": "ICON"
@@ -71,6 +74,71 @@
           "chuva_mm": 13.8,
           "temp_max_c": 31.0,
           "temp_min_c": 22.2
+        }
+      ]
+    },
+    "gfs": {
+      "nome": "GFS",
+      "dias": [
+        {
+          "data": "2026-04-06",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
+        },
+        {
+          "data": "2026-04-07",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
+        },
+        {
+          "data": "2026-04-08",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
+        },
+        {
+          "data": "2026-04-09",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
+        },
+        {
+          "data": "2026-04-10",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
+        },
+        {
+          "data": "2026-04-11",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
+        },
+        {
+          "data": "2026-04-12",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
+        },
+        {
+          "data": "2026-04-13",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
+        },
+        {
+          "data": "2026-04-14",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
+        },
+        {
+          "data": "2026-04-15",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
         }
       ]
     },
@@ -149,6 +217,7 @@
       "n_modelos": 2,
       "valores": {
         "ecmwf_ifs": 19.3,
+        "gfs": 0,
         "icon": 1.9
       }
     },
@@ -160,6 +229,7 @@
       "n_modelos": 2,
       "valores": {
         "ecmwf_ifs": 8.1,
+        "gfs": 0,
         "icon": 0
       }
     },
@@ -171,6 +241,7 @@
       "n_modelos": 2,
       "valores": {
         "ecmwf_ifs": 2.9,
+        "gfs": 0,
         "icon": 10.7
       }
     },
@@ -182,6 +253,7 @@
       "n_modelos": 2,
       "valores": {
         "ecmwf_ifs": 2.5,
+        "gfs": 0,
         "icon": 0.3
       }
     },
@@ -193,6 +265,7 @@
       "n_modelos": 2,
       "valores": {
         "ecmwf_ifs": 6.0,
+        "gfs": 0,
         "icon": 0
       }
     },
@@ -204,6 +277,7 @@
       "n_modelos": 2,
       "valores": {
         "ecmwf_ifs": 0.3,
+        "gfs": 0,
         "icon": 0.6
       }
     },
@@ -215,6 +289,7 @@
       "n_modelos": 2,
       "valores": {
         "ecmwf_ifs": 0.6,
+        "gfs": 0,
         "icon": 1.8
       }
     },
