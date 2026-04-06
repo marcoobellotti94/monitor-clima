@@ -1,0 +1,243 @@
+{
+  "coletado_em": "2026-04-06T22:09:28.383325",
+  "modelos": {
+    "ecmwf_ifs": {
+      "nome": "ECMWF IFS"
+    },
+    "icon": {
+      "nome": "ICON"
+    }
+  },
+  "dias_por_modelo": {
+    "ecmwf_ifs": {
+      "nome": "ECMWF IFS",
+      "dias": [
+        {
+          "data": "2026-04-06",
+          "chuva_mm": 19.3,
+          "temp_max_c": 28.8,
+          "temp_min_c": 21.9
+        },
+        {
+          "data": "2026-04-07",
+          "chuva_mm": 8.1,
+          "temp_max_c": 31.8,
+          "temp_min_c": 21.9
+        },
+        {
+          "data": "2026-04-08",
+          "chuva_mm": 2.9,
+          "temp_max_c": 31.1,
+          "temp_min_c": 22.1
+        },
+        {
+          "data": "2026-04-09",
+          "chuva_mm": 2.5,
+          "temp_max_c": 29.8,
+          "temp_min_c": 22.4
+        },
+        {
+          "data": "2026-04-10",
+          "chuva_mm": 6.0,
+          "temp_max_c": 31.4,
+          "temp_min_c": 21.9
+        },
+        {
+          "data": "2026-04-11",
+          "chuva_mm": 0.3,
+          "temp_max_c": 30.9,
+          "temp_min_c": 21.7
+        },
+        {
+          "data": "2026-04-12",
+          "chuva_mm": 0.6,
+          "temp_max_c": 31.5,
+          "temp_min_c": 21.7
+        },
+        {
+          "data": "2026-04-13",
+          "chuva_mm": 3.6,
+          "temp_max_c": 26.8,
+          "temp_min_c": 22.4
+        },
+        {
+          "data": "2026-04-14",
+          "chuva_mm": 2.4,
+          "temp_max_c": 30.9,
+          "temp_min_c": 22.2
+        },
+        {
+          "data": "2026-04-15",
+          "chuva_mm": 13.8,
+          "temp_max_c": 31.0,
+          "temp_min_c": 22.2
+        }
+      ]
+    },
+    "icon": {
+      "nome": "ICON",
+      "dias": [
+        {
+          "data": "2026-04-06",
+          "chuva_mm": 1.9,
+          "temp_max_c": 29.8,
+          "temp_min_c": 23.4
+        },
+        {
+          "data": "2026-04-07",
+          "chuva_mm": 0.0,
+          "temp_max_c": 31.3,
+          "temp_min_c": 22.3
+        },
+        {
+          "data": "2026-04-08",
+          "chuva_mm": 10.7,
+          "temp_max_c": 31.2,
+          "temp_min_c": 23.9
+        },
+        {
+          "data": "2026-04-09",
+          "chuva_mm": 0.3,
+          "temp_max_c": 31.0,
+          "temp_min_c": 23.2
+        },
+        {
+          "data": "2026-04-10",
+          "chuva_mm": 0.0,
+          "temp_max_c": 33.0,
+          "temp_min_c": 22.8
+        },
+        {
+          "data": "2026-04-11",
+          "chuva_mm": 0.6,
+          "temp_max_c": 32.7,
+          "temp_min_c": 23.2
+        },
+        {
+          "data": "2026-04-12",
+          "chuva_mm": 1.8,
+          "temp_max_c": 32.0,
+          "temp_min_c": 23.2
+        },
+        {
+          "data": "2026-04-13",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
+        },
+        {
+          "data": "2026-04-14",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
+        },
+        {
+          "data": "2026-04-15",
+          "chuva_mm": null,
+          "temp_max_c": null,
+          "temp_min_c": null
+        }
+      ]
+    }
+  },
+  "convergencia": [
+    {
+      "data": "2026-04-06",
+      "media_mm": 10.6,
+      "desvio_mm": 8.7,
+      "nivel": "moderada",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 19.3,
+        "icon": 1.9
+      }
+    },
+    {
+      "data": "2026-04-07",
+      "media_mm": 4.0,
+      "desvio_mm": 4.0,
+      "nivel": "boa",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 8.1,
+        "icon": 0
+      }
+    },
+    {
+      "data": "2026-04-08",
+      "media_mm": 6.8,
+      "desvio_mm": 3.9,
+      "nivel": "boa",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 2.9,
+        "icon": 10.7
+      }
+    },
+    {
+      "data": "2026-04-09",
+      "media_mm": 1.4,
+      "desvio_mm": 1.1,
+      "nivel": "boa",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 2.5,
+        "icon": 0.3
+      }
+    },
+    {
+      "data": "2026-04-10",
+      "media_mm": 3.0,
+      "desvio_mm": 3.0,
+      "nivel": "boa",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 6.0,
+        "icon": 0
+      }
+    },
+    {
+      "data": "2026-04-11",
+      "media_mm": 0.4,
+      "desvio_mm": 0.1,
+      "nivel": "boa",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 0.3,
+        "icon": 0.6
+      }
+    },
+    {
+      "data": "2026-04-12",
+      "media_mm": 1.2,
+      "desvio_mm": 0.6,
+      "nivel": "boa",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 0.6,
+        "icon": 1.8
+      }
+    },
+    {
+      "data": "2026-04-13",
+      "media_mm": null,
+      "desvio_mm": null,
+      "nivel": "insuficiente",
+      "n_modelos": 1
+    },
+    {
+      "data": "2026-04-14",
+      "media_mm": null,
+      "desvio_mm": null,
+      "nivel": "insuficiente",
+      "n_modelos": 1
+    },
+    {
+      "data": "2026-04-15",
+      "media_mm": null,
+      "desvio_mm": null,
+      "nivel": "insuficiente",
+      "n_modelos": 1
+    }
+  ]
+}
