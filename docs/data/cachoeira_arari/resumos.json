@@ -289,11 +289,6 @@
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Cachoeira do Arari",
   "estado": "PA",
-  "atualizado_em": "2026-04-06T14:40:39.053176",
-  "proxima_semana": {
-    "chuva_total_mm": 55.3,
-    "dias_com_chuva": 7,
-    "temp_max_c": 31.3,
-    "fonte": "Open-Meteo"
-  }
+  "atualizado_em": "2026-04-06T14:56:02.794800",
+  "proxima_semana": {}
 }
