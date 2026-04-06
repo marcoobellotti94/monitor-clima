@@ -5,280 +5,212 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Localidade — Monitor Climático</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=Inconsolata:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
-  :root {
-    --bg: #0d1117;
-    --surface: #161b22;
-    --surface2: #1c2330;
-    --border: #30363d;
-    --text: #e6edf3;
-    --muted: #7d8590;
-    --chuva: #58a6ff;
-    --chuva-light: rgba(88,166,255,0.15);
-    --temp-max: #f78166;
-    --temp-min: #79c0ff;
-    --verde: #3fb950;
-    --amber: #d29922;
-    --umidade: #a371f7;
-    --vento: #ffa657;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-  }
+:root{
+  --bg:#0a0e13;--surface:#111720;--surface2:#192030;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.14);
+  --text:#dde4ef;--muted:#5a6880;--muted2:#8a98b0;
+  --chuva:#4da8ff;--tmax:#ff6b4a;--tmin:#60c4ff;
+  --verde:#3ecf6e;--amber:#f0a830;--danger:#e84040;
+  --umid:#a78bfa;--vento:#fb923c;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'Inconsolata',monospace;font-weight:300;}
 
-  header {
-    border-bottom: 1px solid var(--border);
-    padding: 1.25rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    position: sticky;
-    top: 0;
-    background: var(--bg);
-    z-index: 10;
-  }
-  .back {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 0.85rem;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    transition: color 0.15s;
-  }
-  .back:hover { color: var(--text); }
-  .logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.1rem;
-    color: var(--muted);
-  }
-  .logo span { color: var(--chuva); }
-  #loc-header {
-    margin-left: auto;
-    text-align: right;
-  }
-  #loc-nome {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.1rem;
-  }
-  #loc-estado { font-size: 0.75rem; color: var(--muted); }
+header{display:flex;align-items:center;gap:1.5rem;padding:1.1rem 2.5rem;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:10;}
+.back{color:var(--muted);text-decoration:none;font-size:0.78rem;transition:color 0.15s;}
+.back:hover{color:var(--text);}
+.logo{font-family:'Syne',sans-serif;font-size:1rem;color:var(--muted);}
+.logo em{color:var(--chuva);font-style:normal;}
+#loc-header{margin-left:auto;text-align:right;}
+#loc-nome{font-family:'Syne',sans-serif;font-size:1rem;font-weight:500;}
+#loc-uf{font-size:0.65rem;color:var(--muted);}
 
-  main { max-width: 1100px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+main{max-width:1100px;margin:0 auto;padding:2rem 2.5rem 5rem;}
 
-  /* ABAS */
-  .abas {
-    display: flex;
-    gap: 0.25rem;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 2rem;
-  }
-  .aba {
-    padding: 0.6rem 1.25rem;
-    font-size: 0.875rem;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    color: var(--muted);
-    transition: all 0.15s;
-    user-select: none;
-  }
-  .aba:hover { color: var(--text); }
-  .aba.ativa {
-    color: var(--chuva);
-    border-bottom-color: var(--chuva);
-  }
-  .painel { display: none; }
-  .painel.ativo { display: block; }
+/* abas */
+.abas{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:2rem;}
+.aba{padding:0.6rem 1.5rem;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;border-bottom:2px solid transparent;color:var(--muted);transition:all 0.15s;user-select:none;}
+.aba:hover{color:var(--text);}
+.aba.ativa{color:var(--chuva);border-bottom-color:var(--chuva);}
+.painel{display:none;} .painel.ativo{display:block;}
 
-  /* CARTÕES DE RESUMO */
-  .resumo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-  }
-  @media (max-width: 640px) { .resumo-grid { grid-template-columns: 1fr; } }
+/* fonte badge */
+.fonte-row{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:1.5rem;}
+.fchip{font-size:0.6rem;letter-spacing:0.07em;padding:0.12rem 0.45rem;border-radius:3px;border:1px solid var(--border2);color:var(--muted2);}
+.fchip.dest{color:var(--chuva);border-color:rgba(77,168,255,0.25);background:rgba(77,168,255,0.06);}
+.fchip.inmet{color:var(--verde);border-color:rgba(62,207,110,0.25);background:rgba(62,207,110,0.06);}
 
-  .resumo-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.25rem 1.5rem;
-  }
-  .resumo-titulo {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    margin-bottom: 1rem;
-  }
-  .resumo-metricas { display: flex; flex-direction: column; gap: 0.6rem; }
-  .rm { display: flex; justify-content: space-between; align-items: baseline; }
-  .rm-label { font-size: 0.8rem; color: var(--muted); }
-  .rm-valor { font-size: 0.95rem; font-weight: 500; }
-  .rm-valor.chuva { color: var(--chuva); }
-  .rm-valor.temp  { color: var(--temp-max); }
-  .rm-valor.umid  { color: var(--umidade); }
-  .rm-valor.vento { color: var(--vento); }
+/* gráfico container */
+.chart-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1.5rem;}
+.chart-titulo{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:500;margin-bottom:0.2rem;}
+.chart-sub{font-size:0.7rem;color:var(--muted);margin-bottom:1rem;}
 
-  /* SEÇÃO DE GRÁFICO */
-  .secao {
-    margin-bottom: 2.5rem;
-  }
-  .secao-titulo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    margin-bottom: 0.4rem;
-    color: var(--text);
-  }
-  .secao-sub {
-    font-size: 0.78rem;
-    color: var(--muted);
-    margin-bottom: 1rem;
-  }
-  .chart-wrap {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.25rem 1.5rem;
-    position: relative;
-  }
+/* tabela */
+.tabela-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:auto;margin-bottom:1.5rem;}
+table{width:100%;border-collapse:collapse;font-size:0.75rem;}
+th{text-align:left;padding:0.6rem 0.9rem;font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);font-weight:400;}
+td{padding:0.5rem 0.9rem;border-bottom:1px solid rgba(255,255,255,0.04);color:var(--text);}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:rgba(255,255,255,0.02);}
+.tc{color:var(--chuva);font-weight:500;} .tx{color:var(--tmax);} .tn{color:var(--tmin);}
 
-  /* TABELA DE PREVISÃO */
-  .tabela-prev {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.82rem;
-  }
-  .tabela-prev th {
-    text-align: left;
-    padding: 0.6rem 0.75rem;
-    font-size: 0.68rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--muted);
-    border-bottom: 1px solid var(--border);
-    font-weight: 400;
-  }
-  .tabela-prev td {
-    padding: 0.55rem 0.75rem;
-    border-bottom: 1px solid var(--border);
-    color: var(--text);
-  }
-  .tabela-prev tr:last-child td { border-bottom: none; }
-  .tabela-prev tr:hover td { background: var(--surface2); }
-  .td-chuva { color: var(--chuva) !important; font-weight: 500; }
-  .td-temp  { color: var(--temp-max) !important; }
-  .td-min   { color: var(--temp-min) !important; }
+/* barra inline */
+.brow{display:flex;align-items:center;gap:0.5rem;}
+.bbg{flex:1;height:3px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;min-width:50px;}
+.bfill{height:100%;background:var(--chuva);border-radius:2px;}
 
-  /* BARRA DE CHUVA INLINE */
-  .barra-wrap { display: flex; align-items: center; gap: 0.5rem; }
-  .barra-bg {
-    flex: 1;
-    height: 4px;
-    background: var(--surface2);
-    border-radius: 2px;
-    overflow: hidden;
-    min-width: 60px;
-  }
-  .barra-fill { height: 100%; background: var(--chuva); border-radius: 2px; }
+/* semáforo */
+.semaforo-row{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem;}
+.sem-dia{display:flex;flex-direction:column;align-items:center;gap:0.25rem;padding:0.5rem 0.6rem;border-radius:7px;border:1px solid var(--border);background:var(--surface);min-width:58px;font-size:0.62rem;color:var(--muted2);}
+.sem-dia.ok  {border-color:rgba(62,207,110,0.2);background:rgba(62,207,110,0.05);}
+.sem-dia.at  {border-color:rgba(240,168,48,0.2);background:rgba(240,168,48,0.06);}
+.sem-dia.stop{border-color:rgba(232,64,64,0.2);background:rgba(232,64,64,0.06);}
+.sem-dot{width:9px;height:9px;border-radius:50%;}
+.ok .sem-dot{background:var(--verde);} .at .sem-dot{background:var(--amber);} .stop .sem-dot{background:var(--danger);}
+.sem-data{font-size:0.6rem;color:var(--muted);}
+.sem-mm{font-size:0.7rem;font-weight:500;}
+.ok .sem-mm{color:var(--verde);} .at .sem-mm{color:var(--amber);} .stop .sem-mm{color:var(--danger);}
 
-  /* FONTE BADGE */
-  .fonte-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.7rem;
-    color: var(--muted);
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 0.2rem 0.5rem;
-    margin-right: 0.4rem;
-  }
-  .fonte-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--chuva);
-  }
-  .fonte-dot.ct { background: var(--amber); }
-  .fonte-dot.inmet { background: var(--verde); }
+/* cartões de resumo */
+.resumo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:1.5rem;}
+@media(max-width:640px){.resumo-grid{grid-template-columns:1fr;}}
+.rcard{background:var(--surface);padding:1.25rem 1.4rem;}
+.rcard-titulo{font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;}
+.rm{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.5rem;}
+.rm:last-child{margin-bottom:0;}
+.rm-l{font-size:0.72rem;color:var(--muted2);}
+.rm-v{font-size:0.88rem;font-weight:500;}
+.rm-v.c{color:var(--chuva);} .rm-v.x{color:var(--tmax);} .rm-v.n{color:var(--tmin);} .rm-v.u{color:var(--umid);} .rm-v.w{color:var(--vento);}
 
-  .loading { color: var(--muted); padding: 2rem 0; }
-  .aviso {
-    font-size: 0.8rem;
-    color: var(--amber);
-    padding: 0.75rem 1rem;
-    background: rgba(210,153,34,0.1);
-    border: 1px solid rgba(210,153,34,0.3);
-    border-radius: 6px;
-    margin-bottom: 1rem;
-  }
+/* legenda semáforo */
+.sem-legenda{display:flex;gap:1.25rem;margin-bottom:1rem;flex-wrap:wrap;}
+.sl-item{display:flex;align-items:center;gap:0.4rem;font-size:0.65rem;color:var(--muted2);}
+.sl-dot{width:7px;height:7px;border-radius:50%;}
+
+.aviso{font-size:0.78rem;color:var(--amber);padding:0.9rem 1rem;background:rgba(240,168,48,0.07);border:1px solid rgba(240,168,48,0.2);border-radius:7px;margin-bottom:1rem;}
 </style>
 </head>
 <body>
-
 <header>
   <a href="index.html" class="back">← Voltar</a>
-  <div class="logo">Monitor<span>Clima</span></div>
+  <div class="logo">Monitor<em>Clima</em></div>
   <div id="loc-header">
     <div id="loc-nome">—</div>
-    <div id="loc-estado"></div>
+    <div id="loc-uf"></div>
   </div>
 </header>
 
-<main id="main">
-  <div class="loading">Carregando dados da localidade...</div>
-</main>
+<main id="main"><div style="color:var(--muted2);padding:2rem 0;font-size:0.8rem;">Carregando...</div></main>
 
 <script>
-// Utilitários
-const $ = id => document.getElementById(id);
 const params = new URLSearchParams(location.search);
 const LOC_ID = params.get('id');
+const meses = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+const semDias = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
 
-function fmt(v, suf = '', dec = 1) {
-  return v != null ? Number(v).toFixed(dec) + suf : '—';
+const fmt = (v,s='',d=1) => v!=null&&isFinite(+v) ? (+v).toFixed(d)+s : '—';
+const fmtD = s => { if(!s) return '—'; const [,m,d]=s.split('-'); return `${+d} ${meses[+m-1]}`; };
+const fmtSD = s => { if(!s) return ''; return semDias[new Date(s+'T12:00:00').getDay()]; };
+
+const tryFetch = async url => { try{ const r=await fetch(url); return r.ok?r.json():null; }catch{return null;} };
+
+// Configuração Chart.js
+Chart.defaults.color='#5a6880';
+Chart.defaults.borderColor='rgba(255,255,255,0.06)';
+Chart.defaults.font.family="'Inconsolata',monospace";
+Chart.defaults.font.size=11;
+
+// Semáforo de campo
+function classCampo(mm) {
+  if(mm==null) return 'nd';
+  if(mm>=20) return 'stop';
+  if(mm>=10) return 'at';
+  return 'ok';
 }
-function fmtData(s) {
-  if (!s) return '—';
-  const [y, m, d] = s.split('-');
-  const meses = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
-  return `${d} ${meses[+m-1]}`;
-}
-function fmtDiaSemana(s) {
-  if (!s) return '';
-  const dias = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
-  const d = new Date(s + 'T12:00:00');
-  return dias[d.getDay()];
+function txtCampo(mm) {
+  if(mm==null) return '—';
+  if(mm>=20) return 'Pausa';
+  if(mm>=10) return 'Atenção';
+  return 'OK';
 }
 
-// Chart.js defaults
-Chart.defaults.color = '#7d8590';
-Chart.defaults.borderColor = '#30363d';
-Chart.defaults.font.family = "'DM Sans', sans-serif";
-Chart.defaults.font.size = 11;
-
-async function tryFetch(url) {
-  try {
-    const r = await fetch(url);
-    return r.ok ? r.json() : null;
-  } catch { return null; }
+// Gráfico combinado — igual em previsão e histórico
+function criarGraficoCombo(id, labels, chuvas, tmax, tmin) {
+  return new Chart(document.getElementById(id), {
+    data: {
+      labels,
+      datasets: [
+        { type:'bar', label:'Chuva (mm)', data:chuvas,
+          backgroundColor:'rgba(77,168,255,0.35)', borderColor:'rgba(77,168,255,0.7)',
+          borderWidth:1, yAxisID:'y1', order:2 },
+        { type:'line', label:'Temp. máx. (°C)', data:tmax,
+          borderColor:'#ff6b4a', backgroundColor:'transparent',
+          borderWidth:2, pointRadius:2, tension:0.4, yAxisID:'y2', order:1 },
+        { type:'line', label:'Temp. mín. (°C)', data:tmin,
+          borderColor:'#60c4ff', backgroundColor:'transparent',
+          borderWidth:2, pointRadius:2, tension:0.4, yAxisID:'y2', order:1 },
+      ]
+    },
+    options: {
+      responsive:true,
+      interaction:{mode:'index',intersect:false},
+      plugins:{ legend:{position:'bottom',labels:{boxWidth:10,padding:14,color:'#8a98b0'}} },
+      scales:{
+        y1:{position:'left',title:{display:true,text:'Chuva (mm)',color:'#5a6880'},grid:{color:'rgba(255,255,255,0.05)'}},
+        y2:{position:'right',title:{display:true,text:'°C',color:'#5a6880'},grid:{display:false}},
+        x:{grid:{color:'rgba(255,255,255,0.05)'}},
+      }
+    }
+  });
 }
 
-// ─── RENDER PRINCIPAL ───
+// Gráfico umidade + vento
+function criarGraficoUmVento(id, labels, umid, vento) {
+  return new Chart(document.getElementById(id), {
+    data: {
+      labels,
+      datasets: [
+        { type:'line', label:'Umidade média (%)', data:umid,
+          borderColor:'#a78bfa', backgroundColor:'transparent',
+          borderWidth:2, pointRadius:2, tension:0.4, yAxisID:'y1' },
+        { type:'bar', label:'Vento máx. (km/h)', data:vento,
+          backgroundColor:'rgba(251,146,60,0.35)', borderColor:'rgba(251,146,60,0.7)',
+          borderWidth:1, yAxisID:'y2' },
+      ]
+    },
+    options:{
+      responsive:true,
+      interaction:{mode:'index',intersect:false},
+      plugins:{legend:{position:'bottom',labels:{boxWidth:10,padding:14,color:'#8a98b0'}}},
+      scales:{
+        y1:{position:'left',title:{display:true,text:'Umidade (%)',color:'#5a6880'},grid:{color:'rgba(255,255,255,0.05)'}},
+        y2:{position:'right',title:{display:true,text:'Vento (km/h)',color:'#5a6880'},grid:{display:false}},
+        x:{grid:{color:'rgba(255,255,255,0.05)'}},
+      }
+    }
+  });
+}
+
+function rmCard(titulo, dados) {
+  if(!dados) return `<div class="rcard"><div class="rcard-titulo">${titulo}</div><div style="color:var(--muted);font-size:0.75rem;">sem dados</div></div>`;
+  return `<div class="rcard">
+    <div class="rcard-titulo">${titulo}</div>
+    <div class="rm"><span class="rm-l">Chuva total</span><span class="rm-v c">${fmt(dados.chuva_total_mm,' mm')}</span></div>
+    <div class="rm"><span class="rm-l">Dias com chuva</span><span class="rm-v c">${dados.dias_com_chuva??'—'}</span></div>
+    <div class="rm"><span class="rm-l">Dias intensos &gt;20mm</span><span class="rm-v" style="color:var(--danger)">${dados.dias_chuva_intensa??'—'}</span></div>
+    <div class="rm"><span class="rm-l">% chuva concentrada</span><span class="rm-v" style="color:var(--amber)">${dados.pct_chuva_concentrada!=null?dados.pct_chuva_concentrada+'%':'—'}</span></div>
+    <div class="rm"><span class="rm-l">Temp. máx.</span><span class="rm-v x">${fmt(dados.temp_max_periodo_c,' °C')}</span></div>
+    <div class="rm"><span class="rm-l">Temp. mín.</span><span class="rm-v n">${fmt(dados.temp_min_periodo_c,' °C')}</span></div>
+    <div class="rm"><span class="rm-l">Umidade média</span><span class="rm-v u">${fmt(dados.umidade_media_pct,'%',0)}</span></div>
+    <div class="rm"><span class="rm-l">Vento máx.</span><span class="rm-v w">${fmt(dados.vento_max_kmh,' km/h',0)}</span></div>
+  </div>`;
+}
+
 async function init() {
-  if (!LOC_ID) {
-    document.getElementById('main').innerHTML =
-      '<div class="aviso">Parâmetro de localidade não informado. <a href="index.html">Voltar ao início.</a></div>';
-    return;
-  }
+  if(!LOC_ID) { document.getElementById('main').innerHTML='<div class="aviso">Parâmetro ausente.</div>'; return; }
 
   const base = `data/${LOC_ID}`;
   const [prevOM, prevCT, histERA5, histINMET, resumos, idx] = await Promise.all([
@@ -290,15 +222,12 @@ async function init() {
     tryFetch('data/index.json'),
   ]);
 
-  // Preenche header
-  const locInfo = idx?.localidades?.find(l => l.id === LOC_ID);
-  $('loc-nome').textContent = locInfo?.nome || LOC_ID;
-  $('loc-estado').textContent = locInfo?.estado || '';
-  document.title = `${locInfo?.nome || LOC_ID} — Monitor Climático`;
+  const locInfo = idx?.localidades?.find(l=>l.id===LOC_ID);
+  document.getElementById('loc-nome').textContent = locInfo?.nome || LOC_ID;
+  document.getElementById('loc-uf').textContent   = locInfo?.estado || '';
+  document.title = `${locInfo?.nome||LOC_ID} — Monitor Climático`;
 
-  // Monta estrutura de abas
-  const main = $('main');
-  main.innerHTML = `
+  document.getElementById('main').innerHTML = `
     <div class="abas">
       <div class="aba ativa" data-aba="previsao">Previsão</div>
       <div class="aba" data-aba="historico">Histórico</div>
@@ -307,303 +236,141 @@ async function init() {
     <div id="painel-historico" class="painel"></div>
   `;
 
-  // Troca de abas
-  document.querySelectorAll('.aba').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.aba').forEach(b => b.classList.remove('ativa'));
-      document.querySelectorAll('.painel').forEach(p => p.classList.remove('ativo'));
-      btn.classList.add('ativa');
-      document.getElementById('painel-' + btn.dataset.aba).classList.add('ativo');
-    });
-  });
+  document.querySelectorAll('.aba').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.aba').forEach(x=>x.classList.remove('ativa'));
+    document.querySelectorAll('.painel').forEach(x=>x.classList.remove('ativo'));
+    b.classList.add('ativa');
+    document.getElementById('painel-'+b.dataset.aba).classList.add('ativo');
+  }));
 
-  renderPrevisao(prevOM, prevCT);
-  renderHistorico(histERA5, histINMET, resumos);
+  renderPrevisao(prevOM, prevCT, locInfo);
+  renderHistorico(histERA5, histINMET, resumos, locInfo);
 }
 
-// ─── ABA PREVISÃO ───
-function renderPrevisao(om, ct) {
-  const el = $('painel-previsao');
-  if (!om) {
-    el.innerHTML = '<div class="aviso">Dados de previsão não disponíveis. Execute o robô de coleta.</div>';
-    return;
-  }
+function renderPrevisao(om, ct, locInfo) {
+  const el = document.getElementById('painel-previsao');
+  if(!om) { el.innerHTML='<div class="aviso">Dados de previsão não disponíveis. Execute o robô de coleta.</div>'; return; }
 
-  const dias = om.dias.slice(0, 16);
-  const maxChuva = Math.max(...dias.map(d => d.chuva_mm || 0), 1);
+  const dias = om.dias.slice(0,16);
+  const maxChuva = Math.max(...dias.map(d=>d.chuva_mm||0), 1);
+  const labels = dias.map(d=>fmtD(d.data));
+  const chuvas = dias.map(d=>d.chuva_mm||0);
+  const tmax   = dias.map(d=>d.temp_max_c);
+  const tmin   = dias.map(d=>d.temp_min_c);
 
-  // Fontes disponíveis
-  let fontes = `<div class="fonte-badge"><span class="fonte-dot"></span>Open-Meteo</div>`;
-  if (ct) fontes += `<div class="fonte-badge"><span class="fonte-dot ct"></span>Climatempo</div>`;
+  // fontes
+  const fontes = [`<span class="fchip dest">Open-Meteo</span>`];
+  if(ct) fontes.push(`<span class="fchip">Climatempo</span>`);
+  if(locInfo?.tem_inmet) fontes.push(`<span class="fchip inmet">INMET ${locInfo.estacao_inmet||''}</span>`);
 
-  // Gráfico chuva + temperatura
-  const labels = dias.map(d => fmtData(d.data));
-  const chuvas = dias.map(d => d.chuva_mm || 0);
-  const tmax   = dias.map(d => d.temp_max_c);
-  const tmin   = dias.map(d => d.temp_min_c);
+  // semáforo 7 dias
+  const sem7 = dias.slice(0,7).map(d => {
+    const mm = d.chuva_mm||0;
+    const cls = classCampo(mm);
+    return `<div class="sem-dia ${cls}">
+      <div class="sem-dot"></div>
+      <div class="sem-data">${fmtSD(d.data)} ${fmtD(d.data)}</div>
+      <div class="sem-mm">${mm.toFixed(1)} mm</div>
+      <div style="font-size:0.6rem">${txtCampo(mm)}</div>
+    </div>`;
+  }).join('');
 
-  // Tabela detalhada
-  let linhas = '';
-  for (let i = 0; i < dias.length; i++) {
-    const d = dias[i];
-    const ds = fmtDiaSemana(d.data);
-    const ctDia = ct?.dias?.[i];
-    const probCT = ctDia?.prob_chuva_pct;
-    const prob = d.prob_chuva_pct ?? probCT;
-    const pct = (d.chuva_mm || 0) / maxChuva * 100;
-
-    linhas += `<tr>
-      <td>${ds}</td>
-      <td>${fmtData(d.data)}</td>
-      <td>
-        <div class="barra-wrap">
-          <span class="td-chuva">${fmt(d.chuva_mm, ' mm')}</span>
-          <div class="barra-bg"><div class="barra-fill" style="width:${pct}%"></div></div>
-        </div>
-      </td>
-      <td>${prob != null ? prob + '%' : '—'}</td>
-      <td class="td-temp">${fmt(d.temp_max_c, '°')}</td>
-      <td class="td-min">${fmt(d.temp_min_c, '°')}</td>
-      <td>${fmt(d.umidade_max_pct, '%', 0)}</td>
-      <td>${fmt(d.vento_max_kmh, ' km/h', 0)}</td>
+  // tabela
+  const linhas = dias.map((d,i) => {
+    const ctd = ct?.dias?.[i];
+    const prob = d.prob_chuva_pct ?? ctd?.prob_chuva_pct;
+    const pct  = (d.chuva_mm||0)/maxChuva*100;
+    return `<tr>
+      <td>${fmtSD(d.data)}</td>
+      <td>${fmtD(d.data)}</td>
+      <td><div class="brow"><span class="tc">${fmt(d.chuva_mm,' mm')}</span><div class="bbg"><div class="bfill" style="width:${pct}%"></div></div></div></td>
+      <td>${prob!=null?prob+'%':'—'}</td>
+      <td class="tx">${fmt(d.temp_max_c,'°')}</td>
+      <td class="tn">${fmt(d.temp_min_c,'°')}</td>
+      <td>${fmt(d.umidade_max_pct,'%',0)}</td>
+      <td>${fmt(d.vento_max_kmh,' km/h',0)}</td>
     </tr>`;
-  }
+  }).join('');
 
   el.innerHTML = `
-    <div style="margin-bottom:1.25rem;">${fontes}</div>
+    <div class="fonte-row">${fontes.join('')}</div>
 
-    <div class="secao">
-      <div class="secao-titulo">Chuva e temperatura — próximos 16 dias</div>
-      <div class="secao-sub">Barras: precipitação (mm) · Linhas: temperatura máxima e mínima (°C)</div>
-      <div class="chart-wrap">
-        <canvas id="chart-prev" height="90"></canvas>
-      </div>
+    <div class="chart-card">
+      <div class="chart-titulo">Chuva e temperatura — próximos 16 dias</div>
+      <div class="chart-sub">Barras: precipitação (mm) · Linhas: temperatura máxima e mínima (°C)</div>
+      <canvas id="chart-prev" height="90"></canvas>
     </div>
 
-    <div class="secao">
-      <div class="secao-titulo">Detalhamento diário</div>
-      <div class="chart-wrap" style="padding:0; overflow:auto;">
-        <table class="tabela-prev">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Data</th>
-              <th>Chuva</th>
-              <th>Prob.</th>
-              <th>Máx.</th>
-              <th>Mín.</th>
-              <th>Umid.</th>
-              <th>Vento</th>
-            </tr>
-          </thead>
+    <div style="margin-bottom:0.5rem;">
+      <div style="font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:500;margin-bottom:0.5rem;">Condições para trabalho em campo — próximos 7 dias</div>
+      <div class="sem-legenda">
+        <div class="sl-item"><div class="sl-dot" style="background:var(--verde)"></div>Favorável (&lt;10mm)</div>
+        <div class="sl-item"><div class="sl-dot" style="background:var(--amber)"></div>Atenção (10–20mm)</div>
+        <div class="sl-item"><div class="sl-dot" style="background:var(--danger)"></div>Pausa recomendada (&gt;20mm)</div>
+      </div>
+      <div class="semaforo-row">${sem7}</div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-titulo">Detalhamento diário</div>
+      <div class="chart-sub">Previsão completa para 16 dias</div>
+      <div style="overflow:auto;">
+        <table>
+          <thead><tr><th></th><th>Data</th><th>Chuva</th><th>Prob.</th><th>Máx.</th><th>Mín.</th><th>Umid.</th><th>Vento</th></tr></thead>
           <tbody>${linhas}</tbody>
         </table>
       </div>
     </div>
   `;
 
-  // Renderiza gráfico
-  new Chart($('chart-prev'), {
-    data: {
-      labels,
-      datasets: [
-        {
-          type: 'bar',
-          label: 'Chuva (mm)',
-          data: chuvas,
-          backgroundColor: 'rgba(88,166,255,0.35)',
-          borderColor: 'rgba(88,166,255,0.7)',
-          borderWidth: 1,
-          yAxisID: 'y1',
-          order: 2,
-        },
-        {
-          type: 'line',
-          label: 'Temp. máx. (°C)',
-          data: tmax,
-          borderColor: '#f78166',
-          backgroundColor: 'transparent',
-          borderWidth: 2,
-          pointRadius: 2,
-          tension: 0.4,
-          yAxisID: 'y2',
-          order: 1,
-        },
-        {
-          type: 'line',
-          label: 'Temp. mín. (°C)',
-          data: tmin,
-          borderColor: '#79c0ff',
-          backgroundColor: 'transparent',
-          borderWidth: 2,
-          pointRadius: 2,
-          tension: 0.4,
-          yAxisID: 'y2',
-          order: 1,
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      interaction: { mode: 'index', intersect: false },
-      plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 16 } } },
-      scales: {
-        y1: { position: 'left', title: { display: true, text: 'Chuva (mm)' }, grid: { color: '#30363d' } },
-        y2: { position: 'right', title: { display: true, text: '°C' }, grid: { display: false } },
-        x: { grid: { color: '#30363d' } },
-      },
-    },
-  });
+  criarGraficoCombo('chart-prev', labels, chuvas, tmax, tmin);
 }
 
-// ─── ABA HISTÓRICO ───
-function renderHistorico(era5, inmet, resumos) {
-  const el = $('painel-historico');
+function renderHistorico(era5, inmet, resumos, locInfo) {
+  const el = document.getElementById('painel-historico');
   const fonte = inmet || era5;
 
-  if (!fonte) {
-    el.innerHTML = '<div class="aviso">Dados históricos não disponíveis. Execute o robô de coleta.</div>';
-    return;
-  }
+  if(!fonte) { el.innerHTML='<div class="aviso">Dados históricos não disponíveis. Execute o robô de coleta.</div>'; return; }
 
-  const dias = fonte.dias;
-  const labels = dias.map(d => fmtData(d.data));
-  const chuvas = dias.map(d => d.chuva_mm || 0);
-  const tmax   = dias.map(d => d.temp_max_c);
-  const tmin   = dias.map(d => d.temp_min_c);
-  const umid   = dias.map(d => ((d.umidade_max_pct || 0) + (d.umidade_min_pct || 0)) / 2);
-  const vento  = dias.map(d => d.vento_max_kmh || 0);
+  const dias   = fonte.dias;
+  const labels = dias.map(d=>fmtD(d.data));
+  const chuvas = dias.map(d=>d.chuva_mm||0);
+  const tmax   = dias.map(d=>d.temp_max_c);
+  const tmin   = dias.map(d=>d.temp_min_c);
+  const umid   = dias.map(d=>((d.umidade_max_pct||0)+(d.umidade_min_pct||0))/2||null);
+  const vento  = dias.map(d=>d.vento_max_kmh||0);
 
-  const fonteLabel = inmet ? 'INMET (observado)' : 'ERA5 / Open-Meteo';
-  const fonteDot   = inmet ? 'inmet' : '';
-
-  // Cartões de resumo
-  function rmCard(titulo, dados) {
-    if (!dados) return '<div class="resumo-card"><div class="resumo-titulo">' + titulo + '</div><div style="color:var(--muted);font-size:0.8rem">sem dados</div></div>';
-    return `
-      <div class="resumo-card">
-        <div class="resumo-titulo">${titulo}</div>
-        <div class="resumo-metricas">
-          <div class="rm">
-            <span class="rm-label">Chuva total</span>
-            <span class="rm-valor chuva">${fmt(dados.chuva_total_mm, ' mm')}</span>
-          </div>
-          <div class="rm">
-            <span class="rm-label">Dias com chuva</span>
-            <span class="rm-valor chuva">${dados.dias_com_chuva ?? '—'}</span>
-          </div>
-          <div class="rm">
-            <span class="rm-label">Temp. máx.</span>
-            <span class="rm-valor temp">${fmt(dados.temp_max_periodo_c, ' °C')}</span>
-          </div>
-          <div class="rm">
-            <span class="rm-label">Temp. mín.</span>
-            <span class="rm-valor" style="color:var(--temp-min)">${fmt(dados.temp_min_periodo_c, ' °C')}</span>
-          </div>
-          <div class="rm">
-            <span class="rm-label">Umidade média</span>
-            <span class="rm-valor umid">${fmt(dados.umidade_media_pct, '%', 0)}</span>
-          </div>
-          <div class="rm">
-            <span class="rm-label">Vento máx.</span>
-            <span class="rm-valor vento">${fmt(dados.vento_max_kmh, ' km/h', 0)}</span>
-          </div>
-        </div>
-      </div>`;
-  }
+  const fonteLabel = inmet ? `INMET — estação ${inmet.estacao}` : 'Open-Meteo / ERA5';
+  const fonteChipCls = inmet ? 'inmet' : 'dest';
 
   el.innerHTML = `
-    <div style="margin-bottom:1.25rem;">
-      <div class="fonte-badge"><span class="fonte-dot ${fonteDot}"></span>${fonteLabel}</div>
+    <div class="fonte-row">
+      <span class="fchip ${fonteChipCls}">${fonteLabel}</span>
+      ${!inmet ? '<span class="fchip">ERA5 / ECMWF</span>' : ''}
+      <span style="font-size:0.65rem;color:var(--muted);margin-left:0.3rem;">${fonte.periodo_inicio} → ${fonte.periodo_fim}</span>
     </div>
 
     <div class="resumo-grid">
-      ${rmCard('Última semana (7 dias)', resumos?.ultimos_7_dias)}
+      ${rmCard('Última semana — 7 dias', resumos?.ultimos_7_dias)}
       ${rmCard('Últimos 15 dias', resumos?.ultimos_15_dias)}
-      ${rmCard('Último mês (30 dias)', resumos?.ultimos_30_dias)}
+      ${rmCard('Último mês — 30 dias', resumos?.ultimos_30_dias)}
     </div>
 
-    <div class="secao">
-      <div class="secao-titulo">Precipitação diária</div>
-      <div class="secao-sub">Chuva acumulada por dia nos últimos 35 dias</div>
-      <div class="chart-wrap">
-        <canvas id="chart-chuva" height="70"></canvas>
-      </div>
+    <div class="chart-card">
+      <div class="chart-titulo">Precipitação e temperatura diária</div>
+      <div class="chart-sub">Barras: chuva acumulada (mm) · Linhas: temperatura máxima e mínima (°C)</div>
+      <canvas id="chart-hist-combo" height="90"></canvas>
     </div>
 
-    <div class="secao">
-      <div class="secao-titulo">Temperatura</div>
-      <div class="secao-sub">Máxima e mínima diária (°C)</div>
-      <div class="chart-wrap">
-        <canvas id="chart-temp" height="70"></canvas>
-      </div>
-    </div>
-
-    <div class="secao">
-      <div class="secao-titulo">Umidade e vento</div>
-      <div class="secao-sub">Umidade média (%) e vento máximo (km/h)</div>
-      <div class="chart-wrap">
-        <canvas id="chart-umvento" height="70"></canvas>
-      </div>
+    <div class="chart-card">
+      <div class="chart-titulo">Umidade e vento</div>
+      <div class="chart-sub">Umidade média (%) e velocidade máxima do vento (km/h)</div>
+      <canvas id="chart-hist-umvento" height="70"></canvas>
     </div>
   `;
 
-  const baseOpts = {
-    responsive: true,
-    interaction: { mode: 'index', intersect: false },
-    plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 16 } } },
-    scales: {
-      x: { grid: { color: '#30363d' } },
-    },
-  };
-
-  // Chuva
-  new Chart($('chart-chuva'), {
-    type: 'bar',
-    data: {
-      labels,
-      datasets: [{
-        label: 'Chuva (mm)',
-        data: chuvas,
-        backgroundColor: 'rgba(88,166,255,0.45)',
-        borderColor: 'rgba(88,166,255,0.8)',
-        borderWidth: 1,
-      }],
-    },
-    options: { ...baseOpts, scales: { ...baseOpts.scales, y: { grid: { color: '#30363d' } } } },
-  });
-
-  // Temperatura
-  new Chart($('chart-temp'), {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [
-        { label: 'Máxima (°C)', data: tmax, borderColor: '#f78166', backgroundColor: 'rgba(247,129,102,0.1)', fill: false, tension: 0.4, borderWidth: 2, pointRadius: 2 },
-        { label: 'Mínima (°C)', data: tmin, borderColor: '#79c0ff', backgroundColor: 'transparent', fill: false, tension: 0.4, borderWidth: 2, pointRadius: 2 },
-      ],
-    },
-    options: { ...baseOpts, scales: { ...baseOpts.scales, y: { grid: { color: '#30363d' } } } },
-  });
-
-  // Umidade + Vento
-  new Chart($('chart-umvento'), {
-    data: {
-      labels,
-      datasets: [
-        { type: 'line', label: 'Umidade média (%)', data: umid, borderColor: '#a371f7', backgroundColor: 'transparent', tension: 0.4, borderWidth: 2, pointRadius: 2, yAxisID: 'y1' },
-        { type: 'bar',  label: 'Vento máx. (km/h)', data: vento, backgroundColor: 'rgba(255,166,87,0.35)', borderColor: 'rgba(255,166,87,0.7)', borderWidth: 1, yAxisID: 'y2' },
-      ],
-    },
-    options: {
-      ...baseOpts,
-      scales: {
-        y1: { position: 'left',  grid: { color: '#30363d' }, title: { display: true, text: 'Umidade (%)' } },
-        y2: { position: 'right', grid: { display: false },   title: { display: true, text: 'Vento (km/h)' } },
-        x:  { grid: { color: '#30363d' } },
-      },
-    },
-  });
+  criarGraficoCombo('chart-hist-combo', labels, chuvas, tmax, tmin);
+  criarGraficoUmVento('chart-hist-umvento', labels, umid, vento);
 }
 
 init();
