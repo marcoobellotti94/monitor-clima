@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monitor Climático</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2330;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #7d8590;
+    --chuva: #58a6ff;
+    --temp: #f78166;
+    --verde: #3fb950;
+    --amber: #d29922;
+    --accent: #238636;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+  }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 10;
+  }
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--chuva); }
+  #atualizado {
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  main { max-width: 960px; margin: 0 auto; padding: 3rem 2rem; }
+
+  .intro {
+    margin-bottom: 3rem;
+  }
+  .intro h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.03em;
+  }
+  .intro p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: border-color 0.15s, background 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover {
+    border-color: var(--chuva);
+    background: var(--surface2);
+  }
+  .card:hover .seta { opacity: 1; transform: translateX(0); }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  .card-titulo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .card-estado {
+    font-size: 0.7rem;
+    color: var(--muted);
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.15rem 0.4rem;
+    margin-top: 0.1rem;
+  }
+  .seta {
+    color: var(--chuva);
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: all 0.15s;
+  }
+
+  .metricas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .metrica {
+    background: var(--surface2);
+    border-radius: 6px;
+    padding: 0.5rem 0.6rem;
+  }
+  .metrica-label {
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+  }
+  .metrica-valor {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .metrica-valor.chuva { color: var(--chuva); }
+  .metrica-valor.temp { color: var(--temp); }
+
+  .badge-inmet {
+    font-size: 0.6rem;
+    color: var(--verde);
+    border: 1px solid var(--verde);
+    border-radius: 3px;
+    padding: 0.1rem 0.3rem;
+    margin-top: 0.75rem;
+    display: inline-block;
+    opacity: 0.8;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.75rem;
+    margin-top: 4rem;
+  }
+
+  .loading { color: var(--muted); font-size: 0.9rem; padding: 2rem 0; }
+  .erro { color: var(--temp); font-size: 0.85rem; padding: 1rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Monitor<span>Clima</span></div>
+  <div id="atualizado">carregando...</div>
+</header>
+
+<main>
+  <div class="intro">
+    <h1>Monitoramento climático<br>por localidade</h1>
+    <p>Previsão (16 dias) e histórico (7, 15 e 30 dias) para as regiões de operação.<br>
+    Dados atualizados automaticamente toda segunda-feira.</p>
+  </div>
+
+  <div id="grid" class="grid">
+    <div class="loading">Carregando localidades...</div>
+  </div>
+</main>
+
+<footer>
+  Fontes: Open-Meteo · Climatempo · INMET · ERA5/ECMWF &nbsp;·&nbsp; Uso interno
+</footer>
+
+<script>
+async function carregar() {
+  try {
+    const resp = await fetch('data/index.json');
+    if (!resp.ok) throw new Error('Arquivo não encontrado');
+    const idx = await resp.json();
+
+    const atDiv = document.getElementById('atualizado');
+    if (idx.atualizado_em) {
+      const dt = new Date(idx.atualizado_em);
+      atDiv.textContent = 'Atualizado em ' + dt.toLocaleDateString('pt-BR', {
+        day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit'
+      });
+    }
+
+    const grid = document.getElementById('grid');
+    grid.innerHTML = '';
+
+    for (const loc of idx.localidades) {
+      // Tenta carregar resumo da semana
+      let resumo = null;
+      try {
+        const r = await fetch(`data/${loc.id}/resumos.json`);
+        if (r.ok) resumo = await r.json();
+      } catch (_) {}
+
+      const chuva7 = resumo?.ultimos_7_dias?.chuva_total_mm;
+      const tmax7  = resumo?.ultimos_7_dias?.temp_max_periodo_c;
+
+      const card = document.createElement('a');
+      card.className = 'card';
+      card.href = `localidade.html?id=${loc.id}`;
+      card.innerHTML = `
+        <div class="card-header">
+          <div>
+            <div class="card-titulo">${loc.nome}</div>
+            <div class="card-estado">${loc.estado}</div>
+          </div>
+          <div class="seta">→</div>
+        </div>
+        <div class="metricas">
+          <div class="metrica">
+            <div class="metrica-label">Chuva 7 dias</div>
+            <div class="metrica-valor chuva">${chuva7 != null ? chuva7 + ' mm' : '—'}</div>
+          </div>
+          <div class="metrica">
+            <div class="metrica-label">Temp. máx.</div>
+            <div class="metrica-valor temp">${tmax7 != null ? tmax7 + ' °C' : '—'}</div>
+          </div>
+        </div>
+        ${loc.tem_inmet ? '<div class="badge-inmet">estação INMET</div>' : ''}
+      `;
+      grid.appendChild(card);
+    }
+  } catch (e) {
+    document.getElementById('grid').innerHTML =
+      `<div class="erro">Erro ao carregar dados: ${e.message}.<br>
+      Verifique se o robô já rodou ao menos uma vez.</div>`;
+    document.getElementById('atualizado').textContent = 'dados não disponíveis';
+  }
+}
+
+carregar();
+</script>
+</body>
+</html>
