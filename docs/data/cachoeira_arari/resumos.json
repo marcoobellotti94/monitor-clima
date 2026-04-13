@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 102.4,
+    "chuva_total_mm": 121.9,
     "dias_com_chuva": 7,
-    "dias_chuva_intensa": 2,
-    "pct_chuva_concentrada": 51.9,
-    "temp_max_periodo_c": 31.2,
-    "temp_min_periodo_c": 22.5,
-    "temp_max_media_c": 30.0,
-    "umidade_media_pct": 98.1,
-    "vento_max_kmh": 17.3
+    "dias_chuva_intensa": 3,
+    "pct_chuva_concentrada": 68.3,
+    "temp_max_periodo_c": 31.5,
+    "temp_min_periodo_c": 22.7,
+    "temp_max_media_c": 30.3,
+    "umidade_media_pct": 97.9,
+    "vento_max_kmh": 19.6
   },
   "ultimos_15_dias": {
-    "chuva_total_mm": 265.1,
+    "chuva_total_mm": 232.6,
     "dias_com_chuva": 15,
-    "dias_chuva_intensa": 4,
-    "pct_chuva_concentrada": 61.8,
-    "temp_max_periodo_c": 32.0,
+    "dias_chuva_intensa": 5,
+    "pct_chuva_concentrada": 58.6,
+    "temp_max_periodo_c": 31.5,
     "temp_min_periodo_c": 22.5,
-    "temp_max_media_c": 29.9,
-    "umidade_media_pct": 98.5,
-    "vento_max_kmh": 20.7
+    "temp_max_media_c": 30.2,
+    "umidade_media_pct": 98.0,
+    "vento_max_kmh": 19.6
   },
   "ultimos_30_dias": {
-    "chuva_total_mm": 506.0,
+    "chuva_total_mm": 513.1,
     "dias_com_chuva": 30,
-    "dias_chuva_intensa": 9,
-    "pct_chuva_concentrada": 60.5,
+    "dias_chuva_intensa": 10,
+    "pct_chuva_concentrada": 63.0,
     "temp_max_periodo_c": 32.0,
     "temp_min_periodo_c": 22.5,
-    "temp_max_media_c": 29.6,
-    "umidade_media_pct": 98.6,
+    "temp_max_media_c": 29.8,
+    "umidade_media_pct": 98.4,
     "vento_max_kmh": 23.5
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-02-25",
-      "chuva_mm": 20.6,
-      "intensa": true,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-02-26",
-      "chuva_mm": 11.8,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-02-27",
-      "chuva_mm": 6.4,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-02-28",
-      "chuva_mm": 26.9,
-      "intensa": true,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-01",
-      "chuva_mm": 11.8,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-02",
-      "chuva_mm": 4.0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-03-03",
-      "chuva_mm": 7.7,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
     {
       "data": "2026-03-04",
       "chuva_mm": 38.9,
@@ -284,17 +235,66 @@
       "intensa": false,
       "moderada": true,
       "fraca": false
+    },
+    {
+      "data": "2026-04-02",
+      "chuva_mm": 5.5,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-03",
+      "chuva_mm": 2.3,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-04-04",
+      "chuva_mm": 22.3,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-05",
+      "chuva_mm": 39.2,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-06",
+      "chuva_mm": 17.8,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-07",
+      "chuva_mm": 21.7,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-08",
+      "chuva_mm": 13.1,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Cachoeira do Arari",
   "estado": "PA",
-  "atualizado_em": "2026-04-06T23:31:13.460937",
+  "atualizado_em": "2026-04-13T12:11:55.376563",
   "proxima_semana": {
-    "chuva_total_mm": 69.1,
+    "chuva_total_mm": 58.2,
     "dias_com_chuva": 7,
-    "chuva_max_dia": 21.3,
-    "temp_max_c": 31.7,
+    "chuva_max_dia": 22.2,
+    "temp_max_c": 31.4,
     "fonte": "Open-Meteo"
   }
 }
