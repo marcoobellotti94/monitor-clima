@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 60.9,
+    "chuva_total_mm": 68.9,
     "dias_com_chuva": 7,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 31.6,
-    "temp_min_periodo_c": 24.1,
-    "temp_max_media_c": 30.0,
-    "umidade_media_pct": 97.6,
-    "vento_max_kmh": 17.8
+    "temp_max_periodo_c": 31.4,
+    "temp_min_periodo_c": 23.6,
+    "temp_max_media_c": 29.3,
+    "umidade_media_pct": 98.4,
+    "vento_max_kmh": 12.8
   },
   "ultimos_15_dias": {
-    "chuva_total_mm": 129.6,
-    "dias_com_chuva": 13,
-    "dias_chuva_intensa": 1,
-    "pct_chuva_concentrada": 32.3,
-    "temp_max_periodo_c": 32.3,
+    "chuva_total_mm": 136.3,
+    "dias_com_chuva": 15,
+    "dias_chuva_intensa": 0,
+    "pct_chuva_concentrada": 0.0,
+    "temp_max_periodo_c": 31.6,
     "temp_min_periodo_c": 23.6,
-    "temp_max_media_c": 30.2,
-    "umidade_media_pct": 96.7,
+    "temp_max_media_c": 29.8,
+    "umidade_media_pct": 98.0,
     "vento_max_kmh": 17.8
   },
   "ultimos_30_dias": {
-    "chuva_total_mm": 307.4,
-    "dias_com_chuva": 26,
-    "dias_chuva_intensa": 5,
-    "pct_chuva_concentrada": 48.0,
-    "temp_max_periodo_c": 33.2,
+    "chuva_total_mm": 305.2,
+    "dias_com_chuva": 28,
+    "dias_chuva_intensa": 4,
+    "pct_chuva_concentrada": 39.6,
+    "temp_max_periodo_c": 32.7,
     "temp_min_periodo_c": 23.5,
-    "temp_max_media_c": 30.4,
-    "umidade_media_pct": 96.9,
+    "temp_max_media_c": 30.2,
+    "umidade_media_pct": 97.2,
     "vento_max_kmh": 17.8
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-03-11",
-      "chuva_mm": 14.2,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-12",
-      "chuva_mm": 20.2,
-      "intensa": true,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-13",
-      "chuva_mm": 14.6,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-14",
-      "chuva_mm": 1.2,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-03-15",
-      "chuva_mm": 2.1,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-03-16",
-      "chuva_mm": 5.5,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-17",
-      "chuva_mm": 13.7,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
     {
       "data": "2026-03-18",
       "chuva_mm": 17.2,
@@ -284,11 +235,66 @@
       "intensa": false,
       "moderada": true,
       "fraca": false
+    },
+    {
+      "data": "2026-04-16",
+      "chuva_mm": 12.0,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-17",
+      "chuva_mm": 3.9,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-04-18",
+      "chuva_mm": 14.7,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-19",
+      "chuva_mm": 9.0,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-20",
+      "chuva_mm": 14.2,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-21",
+      "chuva_mm": 11.3,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-22",
+      "chuva_mm": 3.8,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Itapiranga",
   "estado": "AM",
-  "atualizado_em": "2026-04-20T12:15:24.596199",
-  "proxima_semana": {}
+  "atualizado_em": "2026-04-27T15:25:54.109295",
+  "proxima_semana": {
+    "chuva_total_mm": 58.0,
+    "dias_com_chuva": 7,
+    "chuva_max_dia": 16.7,
+    "temp_max_c": 31.0,
+    "fonte": "Open-Meteo"
+  }
 }

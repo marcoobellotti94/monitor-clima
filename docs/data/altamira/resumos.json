@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 49.4,
+    "chuva_total_mm": 67.3,
     "dias_com_chuva": 7,
-    "dias_chuva_intensa": 0,
-    "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 30.4,
-    "temp_min_periodo_c": 22.9,
-    "temp_max_media_c": 29.6,
-    "umidade_media_pct": 98.6,
-    "vento_max_kmh": 12.6
+    "dias_chuva_intensa": 1,
+    "pct_chuva_concentrada": 31.4,
+    "temp_max_periodo_c": 31.5,
+    "temp_min_periodo_c": 22.7,
+    "temp_max_media_c": 29.8,
+    "umidade_media_pct": 98.4,
+    "vento_max_kmh": 15.3
   },
   "ultimos_15_dias": {
-    "chuva_total_mm": 142.8,
+    "chuva_total_mm": 121.8,
     "dias_com_chuva": 15,
     "dias_chuva_intensa": 1,
-    "pct_chuva_concentrada": 18.6,
+    "pct_chuva_concentrada": 17.3,
     "temp_max_periodo_c": 31.5,
-    "temp_min_periodo_c": 22.4,
-    "temp_max_media_c": 29.6,
-    "umidade_media_pct": 98.8,
-    "vento_max_kmh": 14.1
+    "temp_min_periodo_c": 22.7,
+    "temp_max_media_c": 29.8,
+    "umidade_media_pct": 98.5,
+    "vento_max_kmh": 15.3
   },
   "ultimos_30_dias": {
-    "chuva_total_mm": 290.6,
+    "chuva_total_mm": 280.1,
     "dias_com_chuva": 30,
     "dias_chuva_intensa": 3,
-    "pct_chuva_concentrada": 28.9,
-    "temp_max_periodo_c": 32.5,
-    "temp_min_periodo_c": 22.3,
-    "temp_max_media_c": 29.6,
+    "pct_chuva_concentrada": 25.5,
+    "temp_max_periodo_c": 31.5,
+    "temp_min_periodo_c": 22.4,
+    "temp_max_media_c": 29.7,
     "umidade_media_pct": 98.7,
-    "vento_max_kmh": 14.6
+    "vento_max_kmh": 15.3
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-03-11",
-      "chuva_mm": 10.1,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-12",
-      "chuva_mm": 11.1,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-13",
-      "chuva_mm": 16.9,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-14",
-      "chuva_mm": 9.3,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-15",
-      "chuva_mm": 9.6,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-16",
-      "chuva_mm": 8.1,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-17",
-      "chuva_mm": 15.5,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
     {
       "data": "2026-03-18",
       "chuva_mm": 7.0,
@@ -284,17 +235,60 @@
       "intensa": false,
       "moderada": true,
       "fraca": false
+    },
+    {
+      "data": "2026-04-16",
+      "chuva_mm": 16.6,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-17",
+      "chuva_mm": 5.7,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-18",
+      "chuva_mm": 16.3,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-19",
+      "chuva_mm": 21.1,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-04-20",
+      "chuva_mm": 2.8,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-04-21",
+      "chuva_mm": 1.2,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-04-22",
+      "chuva_mm": 3.6,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Altamira",
   "estado": "PA",
-  "atualizado_em": "2026-04-20T12:15:24.596199",
-  "proxima_semana": {
-    "chuva_total_mm": 82.4,
-    "dias_com_chuva": 7,
-    "chuva_max_dia": 23.1,
-    "temp_max_c": 29.3,
-    "fonte": "Open-Meteo"
-  }
+  "atualizado_em": "2026-04-27T15:25:54.109295",
+  "proxima_semana": {}
 }
