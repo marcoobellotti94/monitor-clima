@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 168.5,
+    "chuva_total_mm": 275.3,
     "dias_com_chuva": 7,
-    "dias_chuva_intensa": 5,
-    "pct_chuva_concentrada": 85.9,
-    "temp_max_periodo_c": 31.1,
-    "temp_min_periodo_c": 22.7,
-    "temp_max_media_c": 29.2,
+    "dias_chuva_intensa": 6,
+    "pct_chuva_concentrada": 93.6,
+    "temp_max_periodo_c": 30.4,
+    "temp_min_periodo_c": 22.9,
+    "temp_max_media_c": 29.3,
     "umidade_media_pct": 99.0,
-    "vento_max_kmh": 14.1
+    "vento_max_kmh": 16.2
   },
   "ultimos_15_dias": {
-    "chuva_total_mm": 398.8,
+    "chuva_total_mm": 458.6,
     "dias_com_chuva": 15,
-    "dias_chuva_intensa": 10,
-    "pct_chuva_concentrada": 84.2,
+    "dias_chuva_intensa": 11,
+    "pct_chuva_concentrada": 87.7,
     "temp_max_periodo_c": 31.1,
     "temp_min_periodo_c": 22.7,
-    "temp_max_media_c": 29.1,
+    "temp_max_media_c": 29.3,
     "umidade_media_pct": 99.0,
-    "vento_max_kmh": 15.2
+    "vento_max_kmh": 16.2
   },
   "ultimos_30_dias": {
-    "chuva_total_mm": 639.7,
+    "chuva_total_mm": 808.6,
     "dias_com_chuva": 30,
-    "dias_chuva_intensa": 16,
-    "pct_chuva_concentrada": 76.6,
+    "dias_chuva_intensa": 20,
+    "pct_chuva_concentrada": 84.8,
     "temp_max_periodo_c": 31.5,
-    "temp_min_periodo_c": 22.5,
-    "temp_max_media_c": 29.7,
-    "umidade_media_pct": 98.4,
-    "vento_max_kmh": 19.6
+    "temp_min_periodo_c": 22.7,
+    "temp_max_media_c": 29.6,
+    "umidade_media_pct": 98.5,
+    "vento_max_kmh": 19.3
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-03-25",
-      "chuva_mm": 8.3,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-26",
-      "chuva_mm": 4.7,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-03-27",
-      "chuva_mm": 10.5,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-28",
-      "chuva_mm": 14.8,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-29",
-      "chuva_mm": 26.7,
-      "intensa": true,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-30",
-      "chuva_mm": 26.4,
-      "intensa": true,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-03-31",
-      "chuva_mm": 8.4,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
     {
       "data": "2026-04-01",
       "chuva_mm": 10.9,
@@ -284,17 +235,60 @@
       "intensa": true,
       "moderada": false,
       "fraca": false
+    },
+    {
+      "data": "2026-04-30",
+      "chuva_mm": 53.4,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-05-01",
+      "chuva_mm": 20.7,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-05-02",
+      "chuva_mm": 38.5,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-05-03",
+      "chuva_mm": 56.6,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-05-04",
+      "chuva_mm": 17.6,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-05-05",
+      "chuva_mm": 51.7,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-05-06",
+      "chuva_mm": 36.8,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Cachoeira do Arari",
   "estado": "PA",
-  "atualizado_em": "2026-05-04T15:32:30.617559",
-  "proxima_semana": {
-    "chuva_total_mm": 125.6,
-    "dias_com_chuva": 7,
-    "chuva_max_dia": 30.4,
-    "temp_max_c": 30.3,
-    "fonte": "Open-Meteo"
-  }
+  "atualizado_em": "2026-05-11T17:30:27.137759",
+  "proxima_semana": {}
 }
