@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 93.9,
+    "chuva_total_mm": 95.2,
     "dias_com_chuva": 7,
-    "dias_chuva_intensa": 2,
-    "pct_chuva_concentrada": 56.2,
-    "temp_max_periodo_c": 31.4,
-    "temp_min_periodo_c": 22.9,
-    "temp_max_media_c": 30.4,
+    "dias_chuva_intensa": 1,
+    "pct_chuva_concentrada": 31.2,
+    "temp_max_periodo_c": 32.8,
+    "temp_min_periodo_c": 22.1,
+    "temp_max_media_c": 31.0,
+    "umidade_media_pct": 99.0,
+    "vento_max_kmh": 11.9
+  },
+  "ultimos_15_dias": {
+    "chuva_total_mm": 195.2,
+    "dias_com_chuva": 15,
+    "dias_chuva_intensa": 3,
+    "pct_chuva_concentrada": 42.3,
+    "temp_max_periodo_c": 32.8,
+    "temp_min_periodo_c": 22.1,
+    "temp_max_media_c": 30.8,
     "umidade_media_pct": 99.1,
     "vento_max_kmh": 14.8
   },
-  "ultimos_15_dias": {
-    "chuva_total_mm": 194.6,
-    "dias_com_chuva": 15,
-    "dias_chuva_intensa": 4,
-    "pct_chuva_concentrada": 56.7,
-    "temp_max_periodo_c": 32.7,
-    "temp_min_periodo_c": 22.7,
-    "temp_max_media_c": 30.8,
+  "ultimos_30_dias": {
+    "chuva_total_mm": 427.9,
+    "dias_com_chuva": 30,
+    "dias_chuva_intensa": 9,
+    "pct_chuva_concentrada": 54.7,
+    "temp_max_periodo_c": 32.8,
+    "temp_min_periodo_c": 22.1,
+    "temp_max_media_c": 30.9,
     "umidade_media_pct": 99.3,
     "vento_max_kmh": 15.5
   },
-  "ultimos_30_dias": {
-    "chuva_total_mm": 406.2,
-    "dias_com_chuva": 30,
-    "dias_chuva_intensa": 8,
-    "pct_chuva_concentrada": 50.3,
-    "temp_max_periodo_c": 32.8,
-    "temp_min_periodo_c": 22.7,
-    "temp_max_media_c": 31.1,
-    "umidade_media_pct": 99.3,
-    "vento_max_kmh": 16.0
-  },
   "distribuicao_diaria": [
-    {
-      "data": "2026-04-01",
-      "chuva_mm": 4.7,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-04-02",
-      "chuva_mm": 29.1,
-      "intensa": true,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-04-03",
-      "chuva_mm": 1.3,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-04-04",
-      "chuva_mm": 10.2,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-04-05",
-      "chuva_mm": 31.3,
-      "intensa": true,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-04-06",
-      "chuva_mm": 12.4,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-04-07",
-      "chuva_mm": 5.3,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
     {
       "data": "2026-04-08",
       "chuva_mm": 9.7,
@@ -284,17 +235,66 @@
       "intensa": false,
       "moderada": true,
       "fraca": false
+    },
+    {
+      "data": "2026-05-07",
+      "chuva_mm": 11.1,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-05-08",
+      "chuva_mm": 6.4,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-05-09",
+      "chuva_mm": 8.3,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-05-10",
+      "chuva_mm": 17.9,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-05-11",
+      "chuva_mm": 8.7,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-05-12",
+      "chuva_mm": 13.1,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-05-13",
+      "chuva_mm": 29.7,
+      "intensa": true,
+      "moderada": false,
+      "fraca": false
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Tomé-Açu",
   "estado": "PA",
-  "atualizado_em": "2026-05-11T17:30:27.137759",
+  "atualizado_em": "2026-05-18T12:21:23.018410",
   "proxima_semana": {
-    "chuva_total_mm": 81.8,
-    "dias_com_chuva": 7,
-    "chuva_max_dia": 23.9,
-    "temp_max_c": 31.5,
+    "chuva_total_mm": 23.6,
+    "dias_com_chuva": 6,
+    "chuva_max_dia": 8.8,
+    "temp_max_c": 32.4,
     "fonte": "Open-Meteo"
   }
 }
