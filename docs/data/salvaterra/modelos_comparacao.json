@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-05-25T12:19:55.400923",
+  "coletado_em": "2026-06-01T14:51:23.351003",
   "modelos": {
     "ecmwf_ifs": {
       "nome": "ECMWF IFS"
@@ -13,64 +13,64 @@
       "nome": "ECMWF IFS",
       "dias": [
         {
-          "data": "2026-05-25",
-          "chuva_mm": 54.7,
-          "temp_max_c": 28.1,
-          "temp_min_c": 24.0
-        },
-        {
-          "data": "2026-05-26",
-          "chuva_mm": 7.3,
-          "temp_max_c": 30.4,
-          "temp_min_c": 24.0
-        },
-        {
-          "data": "2026-05-27",
-          "chuva_mm": 12.3,
-          "temp_max_c": 29.8,
-          "temp_min_c": 24.0
-        },
-        {
-          "data": "2026-05-28",
-          "chuva_mm": 6.1,
-          "temp_max_c": 29.9,
-          "temp_min_c": 25.0
-        },
-        {
-          "data": "2026-05-29",
-          "chuva_mm": 17.0,
-          "temp_max_c": 28.6,
-          "temp_min_c": 24.3
-        },
-        {
-          "data": "2026-05-30",
-          "chuva_mm": 8.5,
-          "temp_max_c": 29.1,
-          "temp_min_c": 24.1
-        },
-        {
-          "data": "2026-05-31",
-          "chuva_mm": 6.0,
-          "temp_max_c": 26.6,
-          "temp_min_c": 24.6
-        },
-        {
           "data": "2026-06-01",
-          "chuva_mm": 7.4,
-          "temp_max_c": 27.8,
-          "temp_min_c": 24.1
+          "chuva_mm": 4.6,
+          "temp_max_c": 30.0,
+          "temp_min_c": 24.4
         },
         {
           "data": "2026-06-02",
-          "chuva_mm": 10.6,
-          "temp_max_c": 27.4,
-          "temp_min_c": 24.2
+          "chuva_mm": 16.4,
+          "temp_max_c": 29.8,
+          "temp_min_c": 23.9
         },
         {
           "data": "2026-06-03",
-          "chuva_mm": 11.0,
-          "temp_max_c": 27.2,
-          "temp_min_c": 24.1
+          "chuva_mm": 2.2,
+          "temp_max_c": 29.4,
+          "temp_min_c": 24.6
+        },
+        {
+          "data": "2026-06-04",
+          "chuva_mm": 9.0,
+          "temp_max_c": 29.7,
+          "temp_min_c": 24.9
+        },
+        {
+          "data": "2026-06-05",
+          "chuva_mm": 8.9,
+          "temp_max_c": 29.1,
+          "temp_min_c": 24.3
+        },
+        {
+          "data": "2026-06-06",
+          "chuva_mm": 11.5,
+          "temp_max_c": 28.9,
+          "temp_min_c": 24.0
+        },
+        {
+          "data": "2026-06-07",
+          "chuva_mm": 7.2,
+          "temp_max_c": 28.5,
+          "temp_min_c": 24.0
+        },
+        {
+          "data": "2026-06-08",
+          "chuva_mm": 5.4,
+          "temp_max_c": 27.8,
+          "temp_min_c": 25.2
+        },
+        {
+          "data": "2026-06-09",
+          "chuva_mm": 1.2,
+          "temp_max_c": 28.8,
+          "temp_min_c": 25.1
+        },
+        {
+          "data": "2026-06-10",
+          "chuva_mm": 13.4,
+          "temp_max_c": 27.5,
+          "temp_min_c": 25.1
         }
       ]
     },
@@ -78,177 +78,177 @@
       "nome": "GFS",
       "dias": [
         {
-          "data": "2026-05-25",
-          "chuva_mm": 26.2,
-          "temp_max_c": 25.6,
-          "temp_min_c": 22.8
-        },
-        {
-          "data": "2026-05-26",
-          "chuva_mm": 7.6,
-          "temp_max_c": 29.6,
-          "temp_min_c": 23.3
-        },
-        {
-          "data": "2026-05-27",
-          "chuva_mm": 15.4,
-          "temp_max_c": 29.7,
-          "temp_min_c": 23.2
-        },
-        {
-          "data": "2026-05-28",
-          "chuva_mm": 20.1,
-          "temp_max_c": 28.8,
-          "temp_min_c": 23.8
-        },
-        {
-          "data": "2026-05-29",
-          "chuva_mm": 27.6,
-          "temp_max_c": 29.9,
-          "temp_min_c": 23.6
-        },
-        {
-          "data": "2026-05-30",
-          "chuva_mm": 22.1,
-          "temp_max_c": 29.0,
-          "temp_min_c": 23.6
-        },
-        {
-          "data": "2026-05-31",
-          "chuva_mm": 6.7,
-          "temp_max_c": 25.8,
-          "temp_min_c": 23.3
-        },
-        {
           "data": "2026-06-01",
-          "chuva_mm": 4.3,
-          "temp_max_c": 29.9,
-          "temp_min_c": 23.0
+          "chuva_mm": 15.6,
+          "temp_max_c": 30.3,
+          "temp_min_c": 23.4
         },
         {
           "data": "2026-06-02",
-          "chuva_mm": 3.1,
-          "temp_max_c": 28.9,
+          "chuva_mm": 23.4,
+          "temp_max_c": 29.7,
           "temp_min_c": 22.9
         },
         {
           "data": "2026-06-03",
-          "chuva_mm": 9.0,
-          "temp_max_c": 29.8,
-          "temp_min_c": 23.0
+          "chuva_mm": 23.5,
+          "temp_max_c": 29.5,
+          "temp_min_c": 23.4
+        },
+        {
+          "data": "2026-06-04",
+          "chuva_mm": 17.7,
+          "temp_max_c": 29.4,
+          "temp_min_c": 24.0
+        },
+        {
+          "data": "2026-06-05",
+          "chuva_mm": 33.3,
+          "temp_max_c": 28.3,
+          "temp_min_c": 23.3
+        },
+        {
+          "data": "2026-06-06",
+          "chuva_mm": 11.1,
+          "temp_max_c": 27.6,
+          "temp_min_c": 23.5
+        },
+        {
+          "data": "2026-06-07",
+          "chuva_mm": 4.1,
+          "temp_max_c": 27.8,
+          "temp_min_c": 23.6
+        },
+        {
+          "data": "2026-06-08",
+          "chuva_mm": 6.5,
+          "temp_max_c": 28.0,
+          "temp_min_c": 23.5
+        },
+        {
+          "data": "2026-06-09",
+          "chuva_mm": 5.5,
+          "temp_max_c": 27.5,
+          "temp_min_c": 23.9
+        },
+        {
+          "data": "2026-06-10",
+          "chuva_mm": 5.7,
+          "temp_max_c": 28.8,
+          "temp_min_c": 23.5
         }
       ]
     }
   },
   "convergencia": [
     {
-      "data": "2026-05-25",
-      "media_mm": 40.5,
-      "desvio_mm": 14.3,
-      "nivel": "moderada",
-      "n_modelos": 2,
-      "valores": {
-        "ecmwf_ifs": 54.7,
-        "gfs": 26.2
-      }
-    },
-    {
-      "data": "2026-05-26",
-      "media_mm": 7.4,
-      "desvio_mm": 0.1,
-      "nivel": "boa",
-      "n_modelos": 2,
-      "valores": {
-        "ecmwf_ifs": 7.3,
-        "gfs": 7.6
-      }
-    },
-    {
-      "data": "2026-05-27",
-      "media_mm": 13.9,
-      "desvio_mm": 1.5,
-      "nivel": "boa",
-      "n_modelos": 2,
-      "valores": {
-        "ecmwf_ifs": 12.3,
-        "gfs": 15.4
-      }
-    },
-    {
-      "data": "2026-05-28",
-      "media_mm": 13.1,
-      "desvio_mm": 7.0,
-      "nivel": "moderada",
-      "n_modelos": 2,
-      "valores": {
-        "ecmwf_ifs": 6.1,
-        "gfs": 20.1
-      }
-    },
-    {
-      "data": "2026-05-29",
-      "media_mm": 22.3,
-      "desvio_mm": 5.3,
-      "nivel": "moderada",
-      "n_modelos": 2,
-      "valores": {
-        "ecmwf_ifs": 17.0,
-        "gfs": 27.6
-      }
-    },
-    {
-      "data": "2026-05-30",
-      "media_mm": 15.3,
-      "desvio_mm": 6.8,
-      "nivel": "moderada",
-      "n_modelos": 2,
-      "valores": {
-        "ecmwf_ifs": 8.5,
-        "gfs": 22.1
-      }
-    },
-    {
-      "data": "2026-05-31",
-      "media_mm": 6.3,
-      "desvio_mm": 0.4,
-      "nivel": "boa",
-      "n_modelos": 2,
-      "valores": {
-        "ecmwf_ifs": 6.0,
-        "gfs": 6.7
-      }
-    },
-    {
       "data": "2026-06-01",
-      "media_mm": 5.8,
-      "desvio_mm": 1.6,
-      "nivel": "boa",
+      "media_mm": 10.1,
+      "desvio_mm": 5.5,
+      "nivel": "moderada",
       "n_modelos": 2,
       "valores": {
-        "ecmwf_ifs": 7.4,
-        "gfs": 4.3
+        "ecmwf_ifs": 4.6,
+        "gfs": 15.6
       }
     },
     {
       "data": "2026-06-02",
-      "media_mm": 6.8,
-      "desvio_mm": 3.7,
+      "media_mm": 19.9,
+      "desvio_mm": 3.5,
       "nivel": "boa",
       "n_modelos": 2,
       "valores": {
-        "ecmwf_ifs": 10.6,
-        "gfs": 3.1
+        "ecmwf_ifs": 16.4,
+        "gfs": 23.4
       }
     },
     {
       "data": "2026-06-03",
-      "media_mm": 10.0,
-      "desvio_mm": 1.0,
+      "media_mm": 12.8,
+      "desvio_mm": 10.6,
+      "nivel": "moderada",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 2.2,
+        "gfs": 23.5
+      }
+    },
+    {
+      "data": "2026-06-04",
+      "media_mm": 13.3,
+      "desvio_mm": 4.3,
       "nivel": "boa",
       "n_modelos": 2,
       "valores": {
-        "ecmwf_ifs": 11.0,
-        "gfs": 9.0
+        "ecmwf_ifs": 9.0,
+        "gfs": 17.7
+      }
+    },
+    {
+      "data": "2026-06-05",
+      "media_mm": 21.1,
+      "desvio_mm": 12.2,
+      "nivel": "moderada",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 8.9,
+        "gfs": 33.3
+      }
+    },
+    {
+      "data": "2026-06-06",
+      "media_mm": 11.3,
+      "desvio_mm": 0.2,
+      "nivel": "boa",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 11.5,
+        "gfs": 11.1
+      }
+    },
+    {
+      "data": "2026-06-07",
+      "media_mm": 5.7,
+      "desvio_mm": 1.6,
+      "nivel": "boa",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 7.2,
+        "gfs": 4.1
+      }
+    },
+    {
+      "data": "2026-06-08",
+      "media_mm": 6.0,
+      "desvio_mm": 0.5,
+      "nivel": "boa",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 5.4,
+        "gfs": 6.5
+      }
+    },
+    {
+      "data": "2026-06-09",
+      "media_mm": 3.4,
+      "desvio_mm": 2.1,
+      "nivel": "boa",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 1.2,
+        "gfs": 5.5
+      }
+    },
+    {
+      "data": "2026-06-10",
+      "media_mm": 9.6,
+      "desvio_mm": 3.9,
+      "nivel": "boa",
+      "n_modelos": 2,
+      "valores": {
+        "ecmwf_ifs": 13.4,
+        "gfs": 5.7
       }
     }
   ]
