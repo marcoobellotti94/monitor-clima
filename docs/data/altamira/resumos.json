@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 29.2,
+    "chuva_total_mm": 24.7,
     "dias_com_chuva": 7,
+    "dias_chuva_intensa": 0,
+    "pct_chuva_concentrada": 0.0,
+    "temp_max_periodo_c": 31.0,
+    "temp_min_periodo_c": 23.0,
+    "temp_max_media_c": 30.4,
+    "umidade_media_pct": 98.9,
+    "vento_max_kmh": 11.8
+  },
+  "ultimos_15_dias": {
+    "chuva_total_mm": 56.9,
+    "dias_com_chuva": 15,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
     "temp_max_periodo_c": 31.2,
     "temp_min_periodo_c": 22.9,
-    "temp_max_media_c": 30.0,
+    "temp_max_media_c": 30.2,
     "umidade_media_pct": 98.9,
     "vento_max_kmh": 13.5
   },
-  "ultimos_15_dias": {
-    "chuva_total_mm": 88.1,
-    "dias_com_chuva": 15,
-    "dias_chuva_intensa": 1,
-    "pct_chuva_concentrada": 23.6,
-    "temp_max_periodo_c": 31.5,
-    "temp_min_periodo_c": 22.6,
-    "temp_max_media_c": 29.9,
-    "umidade_media_pct": 99.0,
-    "vento_max_kmh": 13.5
-  },
   "ultimos_30_dias": {
-    "chuva_total_mm": 190.9,
+    "chuva_total_mm": 175.8,
     "dias_com_chuva": 28,
     "dias_chuva_intensa": 2,
-    "pct_chuva_concentrada": 22.1,
+    "pct_chuva_concentrada": 24.0,
     "temp_max_periodo_c": 31.5,
     "temp_min_periodo_c": 22.5,
-    "temp_max_media_c": 30.0,
+    "temp_max_media_c": 29.9,
     "umidade_media_pct": 98.9,
     "vento_max_kmh": 14.3
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-04-22",
-      "chuva_mm": 3.6,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-04-23",
-      "chuva_mm": 20.6,
-      "intensa": true,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-04-24",
-      "chuva_mm": 2.7,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-04-25",
-      "chuva_mm": 2.8,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-04-26",
-      "chuva_mm": 0.5,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-04-27",
-      "chuva_mm": 4.5,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-04-28",
-      "chuva_mm": 1.9,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
     {
       "data": "2026-04-29",
       "chuva_mm": 0.9,
@@ -284,11 +235,66 @@
       "intensa": false,
       "moderada": false,
       "fraca": true
+    },
+    {
+      "data": "2026-05-28",
+      "chuva_mm": 0.9,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-05-29",
+      "chuva_mm": 3.5,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-05-30",
+      "chuva_mm": 2.3,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-05-31",
+      "chuva_mm": 9.6,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-06-01",
+      "chuva_mm": 3.9,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-06-02",
+      "chuva_mm": 2.2,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-06-03",
+      "chuva_mm": 2.3,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Altamira",
   "estado": "PA",
-  "atualizado_em": "2026-06-01T14:50:45.647084",
-  "proxima_semana": {}
+  "atualizado_em": "2026-06-08T12:58:20.112133",
+  "proxima_semana": {
+    "chuva_total_mm": 51.8,
+    "dias_com_chuva": 7,
+    "chuva_max_dia": 28.3,
+    "temp_max_c": 31.1,
+    "fonte": "Open-Meteo"
+  }
 }
