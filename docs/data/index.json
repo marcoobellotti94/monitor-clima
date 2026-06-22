@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-06-15T14:56:01.923828",
+  "atualizado_em": "2026-06-22T14:26:42.845888",
   "localidades": [
     {
       "id": "tome_acu",
@@ -31,7 +31,6 @@
       "fontes": [
         "Open-Meteo",
         "ECMWF IFS",
-        "GFS",
         "ICON"
       ]
     },
@@ -47,6 +46,7 @@
       "tem_modelos": true,
       "fontes": [
         "Open-Meteo",
+        "ECMWF IFS",
         "GFS",
         "ICON"
       ]
@@ -98,7 +98,8 @@
       "fontes": [
         "Open-Meteo",
         "ECMWF IFS",
-        "GFS"
+        "GFS",
+        "ICON"
       ]
     },
     {
@@ -130,6 +131,7 @@
       "tem_modelos": true,
       "fontes": [
         "Open-Meteo",
+        "ECMWF IFS",
         "GFS",
         "ICON"
       ]
