@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 21.1,
-    "dias_com_chuva": 6,
+    "chuva_total_mm": 4.6,
+    "dias_com_chuva": 5,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 31.7,
-    "temp_min_periodo_c": 24.0,
-    "temp_max_media_c": 30.9,
-    "umidade_media_pct": 96.7,
-    "vento_max_kmh": 15.5
+    "temp_max_periodo_c": 31.4,
+    "temp_min_periodo_c": 23.6,
+    "temp_max_media_c": 31.0,
+    "umidade_media_pct": 97.1,
+    "vento_max_kmh": 12.2
   },
   "ultimos_15_dias": {
-    "chuva_total_mm": 76.1,
-    "dias_com_chuva": 14,
+    "chuva_total_mm": 38.9,
+    "dias_com_chuva": 12,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
     "temp_max_periodo_c": 31.7,
-    "temp_min_periodo_c": 23.5,
-    "temp_max_media_c": 30.2,
-    "umidade_media_pct": 97.6,
+    "temp_min_periodo_c": 23.6,
+    "temp_max_media_c": 30.8,
+    "umidade_media_pct": 97.1,
     "vento_max_kmh": 15.5
   },
   "ultimos_30_dias": {
-    "chuva_total_mm": 222.3,
-    "dias_com_chuva": 28,
-    "dias_chuva_intensa": 2,
-    "pct_chuva_concentrada": 30.9,
+    "chuva_total_mm": 136.1,
+    "dias_com_chuva": 26,
+    "dias_chuva_intensa": 1,
+    "pct_chuva_concentrada": 25.1,
     "temp_max_periodo_c": 32.2,
     "temp_min_periodo_c": 23.5,
-    "temp_max_media_c": 30.1,
-    "umidade_media_pct": 98.0,
+    "temp_max_media_c": 30.4,
+    "umidade_media_pct": 97.6,
     "vento_max_kmh": 15.5
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-05-13",
-      "chuva_mm": 17.2,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-05-14",
-      "chuva_mm": 5.9,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-05-15",
-      "chuva_mm": 5.5,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-05-16",
-      "chuva_mm": 7.1,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-05-17",
-      "chuva_mm": 2.4,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-05-18",
-      "chuva_mm": 1.4,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-05-19",
-      "chuva_mm": 2.4,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
     {
       "data": "2026-05-20",
       "chuva_mm": 10.7,
@@ -284,17 +235,66 @@
       "intensa": false,
       "moderada": true,
       "fraca": false
+    },
+    {
+      "data": "2026-06-18",
+      "chuva_mm": 1.1,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-06-19",
+      "chuva_mm": 0.2,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-06-20",
+      "chuva_mm": 0.7,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-06-21",
+      "chuva_mm": 0.6,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-06-22",
+      "chuva_mm": 0.6,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-06-23",
+      "chuva_mm": 0.5,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-06-24",
+      "chuva_mm": 0.9,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Itapiranga",
   "estado": "AM",
-  "atualizado_em": "2026-06-22T14:26:42.845888",
+  "atualizado_em": "2026-06-29T12:57:38.994017",
   "proxima_semana": {
-    "chuva_total_mm": 40.5,
+    "chuva_total_mm": 26.7,
     "dias_com_chuva": 7,
-    "chuva_max_dia": 18.8,
-    "temp_max_c": 30.6,
+    "chuva_max_dia": 13.0,
+    "temp_max_c": 31.7,
     "fonte": "Open-Meteo"
   }
 }
