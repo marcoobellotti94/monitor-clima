@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-06-29T12:57:38.994017",
+  "atualizado_em": "2026-07-06T12:36:08.091850",
   "localidades": [
     {
       "id": "tome_acu",
@@ -65,8 +65,7 @@
       "fontes": [
         "Open-Meteo",
         "ECMWF IFS",
-        "GFS",
-        "ICON"
+        "GFS"
       ]
     },
     {
