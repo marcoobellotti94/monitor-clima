@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
+    "chuva_total_mm": 0.0,
+    "dias_com_chuva": 0,
+    "dias_chuva_intensa": 0,
+    "pct_chuva_concentrada": 0,
+    "temp_max_periodo_c": 36.4,
+    "temp_min_periodo_c": 21.1,
+    "temp_max_media_c": 34.6,
+    "umidade_media_pct": 59.6,
+    "vento_max_kmh": 18.4
+  },
+  "ultimos_15_dias": {
     "chuva_total_mm": 4.3,
     "dias_com_chuva": 1,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 34.4,
-    "temp_min_periodo_c": 21.4,
-    "temp_max_media_c": 33.4,
-    "umidade_media_pct": 77.6,
+    "temp_max_periodo_c": 36.4,
+    "temp_min_periodo_c": 21.1,
+    "temp_max_media_c": 34.1,
+    "umidade_media_pct": 68.5,
     "vento_max_kmh": 21.4
-  },
-  "ultimos_15_dias": {
-    "chuva_total_mm": 4.5,
-    "dias_com_chuva": 1,
-    "dias_chuva_intensa": 0,
-    "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 36.0,
-    "temp_min_periodo_c": 20.8,
-    "temp_max_media_c": 33.9,
-    "umidade_media_pct": 71.6,
-    "vento_max_kmh": 24.3
   },
   "ultimos_30_dias": {
     "chuva_total_mm": 4.8,
     "dias_com_chuva": 1,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 36.0,
+    "temp_max_periodo_c": 36.4,
     "temp_min_periodo_c": 20.8,
-    "temp_max_media_c": 34.0,
-    "umidade_media_pct": 70.2,
+    "temp_max_media_c": 34.3,
+    "umidade_media_pct": 68.1,
     "vento_max_kmh": 24.3
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-05-27",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-05-28",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-05-29",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-05-30",
-      "chuva_mm": 0.1,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-05-31",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-06-01",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-06-02",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
     {
       "data": "2026-06-03",
       "chuva_mm": 0,
@@ -284,17 +235,66 @@
       "intensa": false,
       "moderada": false,
       "fraca": false
+    },
+    {
+      "data": "2026-07-02",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-07-03",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-07-04",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-07-05",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-07-06",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-07-07",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-07-08",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Picos",
   "estado": "PI",
-  "atualizado_em": "2026-07-06T12:36:08.091850",
+  "atualizado_em": "2026-07-13T11:51:37.371149",
   "proxima_semana": {
     "chuva_total_mm": 7.3,
     "dias_com_chuva": 1,
-    "chuva_max_dia": 6.8,
-    "temp_max_c": 36.1,
+    "chuva_max_dia": 7.3,
+    "temp_max_c": 36.2,
     "fonte": "Open-Meteo"
   }
 }
