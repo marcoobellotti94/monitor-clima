@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 19.9,
-    "dias_com_chuva": 7,
-    "dias_chuva_intensa": 0,
-    "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 31.6,
-    "temp_min_periodo_c": 23.9,
-    "temp_max_media_c": 31.2,
-    "umidade_media_pct": 94.6,
-    "vento_max_kmh": 20.2
-  },
-  "ultimos_15_dias": {
-    "chuva_total_mm": 33.2,
-    "dias_com_chuva": 15,
+    "chuva_total_mm": 38.8,
+    "dias_com_chuva": 6,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
     "temp_max_periodo_c": 32.2,
-    "temp_min_periodo_c": 23.6,
-    "temp_max_media_c": 31.4,
-    "umidade_media_pct": 94.6,
-    "vento_max_kmh": 22.0
+    "temp_min_periodo_c": 22.5,
+    "temp_max_media_c": 31.8,
+    "umidade_media_pct": 96.6,
+    "vento_max_kmh": 18.5
+  },
+  "ultimos_15_dias": {
+    "chuva_total_mm": 60.4,
+    "dias_com_chuva": 14,
+    "dias_chuva_intensa": 0,
+    "pct_chuva_concentrada": 0.0,
+    "temp_max_periodo_c": 32.2,
+    "temp_min_periodo_c": 22.5,
+    "temp_max_media_c": 31.5,
+    "umidade_media_pct": 95.4,
+    "vento_max_kmh": 20.2
   },
   "ultimos_30_dias": {
-    "chuva_total_mm": 153.4,
+    "chuva_total_mm": 111.2,
     "dias_com_chuva": 28,
-    "dias_chuva_intensa": 1,
-    "pct_chuva_concentrada": 23.3,
+    "dias_chuva_intensa": 0,
+    "pct_chuva_concentrada": 0.0,
     "temp_max_periodo_c": 32.7,
     "temp_min_periodo_c": 22.5,
-    "temp_max_media_c": 31.3,
-    "umidade_media_pct": 96.4,
+    "temp_max_media_c": 31.5,
+    "umidade_media_pct": 96.1,
     "vento_max_kmh": 22.0
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-06-17",
-      "chuva_mm": 11.4,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-06-18",
-      "chuva_mm": 1.0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-06-19",
-      "chuva_mm": 5.0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-06-20",
-      "chuva_mm": 7.5,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-06-21",
-      "chuva_mm": 2.9,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-06-22",
-      "chuva_mm": 7.0,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-06-23",
-      "chuva_mm": 5.3,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
     {
       "data": "2026-06-24",
       "chuva_mm": 35.7,
@@ -284,17 +235,60 @@
       "intensa": false,
       "moderada": false,
       "fraca": true
+    },
+    {
+      "data": "2026-07-23",
+      "chuva_mm": 1.9,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-07-24",
+      "chuva_mm": 3.2,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-07-25",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-07-26",
+      "chuva_mm": 2.5,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-07-27",
+      "chuva_mm": 7.0,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
+    },
+    {
+      "data": "2026-07-28",
+      "chuva_mm": 4.6,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-07-29",
+      "chuva_mm": 19.6,
+      "intensa": false,
+      "moderada": true,
+      "fraca": false
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Cachoeira do Arari",
   "estado": "PA",
-  "atualizado_em": "2026-07-27T12:11:03.065152",
-  "proxima_semana": {
-    "chuva_total_mm": 19.7,
-    "dias_com_chuva": 6,
-    "chuva_max_dia": 7.2,
-    "temp_max_c": 32.3,
-    "fonte": "Open-Meteo"
-  }
+  "atualizado_em": "2026-08-03T12:12:14.848965",
+  "proxima_semana": {}
 }
