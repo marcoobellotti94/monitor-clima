@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-08-24T09:36:10.536471",
+  "atualizado_em": "2026-08-31T16:31:14.108511",
   "localidades": [
     {
       "id": "tome_acu",
@@ -10,12 +10,9 @@
       "tem_inmet": false,
       "estacao_inmet": null,
       "tem_climatempo": false,
-      "tem_modelos": true,
+      "tem_modelos": false,
       "fontes": [
-        "Open-Meteo",
-        "ECMWF IFS",
-        "GFS",
-        "ICON"
+        "Open-Meteo"
       ]
     },
     {
@@ -27,12 +24,9 @@
       "tem_inmet": false,
       "estacao_inmet": null,
       "tem_climatempo": false,
-      "tem_modelos": true,
+      "tem_modelos": false,
       "fontes": [
-        "Open-Meteo",
-        "ECMWF IFS",
-        "GFS",
-        "ICON"
+        "Open-Meteo"
       ]
     },
     {
@@ -44,11 +38,9 @@
       "tem_inmet": false,
       "estacao_inmet": null,
       "tem_climatempo": false,
-      "tem_modelos": true,
+      "tem_modelos": false,
       "fontes": [
-        "Open-Meteo",
-        "ECMWF IFS",
-        "ICON"
+        "Open-Meteo"
       ]
     },
     {
@@ -60,12 +52,9 @@
       "tem_inmet": false,
       "estacao_inmet": null,
       "tem_climatempo": false,
-      "tem_modelos": true,
+      "tem_modelos": false,
       "fontes": [
-        "Open-Meteo",
-        "ECMWF IFS",
-        "GFS",
-        "ICON"
+        "Open-Meteo"
       ]
     },
     {
@@ -77,12 +66,9 @@
       "tem_inmet": false,
       "estacao_inmet": null,
       "tem_climatempo": false,
-      "tem_modelos": true,
+      "tem_modelos": false,
       "fontes": [
-        "Open-Meteo",
-        "ECMWF IFS",
-        "GFS",
-        "ICON"
+        "Open-Meteo"
       ]
     },
     {
@@ -94,12 +80,9 @@
       "tem_inmet": false,
       "estacao_inmet": null,
       "tem_climatempo": false,
-      "tem_modelos": true,
+      "tem_modelos": false,
       "fontes": [
-        "Open-Meteo",
-        "ECMWF IFS",
-        "GFS",
-        "ICON"
+        "Open-Meteo"
       ]
     },
     {
@@ -111,12 +94,9 @@
       "tem_inmet": false,
       "estacao_inmet": null,
       "tem_climatempo": false,
-      "tem_modelos": true,
+      "tem_modelos": false,
       "fontes": [
-        "Open-Meteo",
-        "ECMWF IFS",
-        "GFS",
-        "ICON"
+        "Open-Meteo"
       ]
     },
     {
@@ -131,7 +111,6 @@
       "tem_modelos": true,
       "fontes": [
         "Open-Meteo",
-        "ECMWF IFS",
         "GFS"
       ]
     }
