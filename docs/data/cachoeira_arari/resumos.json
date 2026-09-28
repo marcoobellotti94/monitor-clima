@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 8.7,
-    "dias_com_chuva": 6,
+    "chuva_total_mm": 8.5,
+    "dias_com_chuva": 5,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 33.5,
-    "temp_min_periodo_c": 24.4,
-    "temp_max_media_c": 33.0,
-    "umidade_media_pct": 89.0,
-    "vento_max_kmh": 19.8
+    "temp_max_periodo_c": 34.1,
+    "temp_min_periodo_c": 23.8,
+    "temp_max_media_c": 33.2,
+    "umidade_media_pct": 89.1,
+    "vento_max_kmh": 20.9
   },
   "ultimos_15_dias": {
-    "chuva_total_mm": 15.0,
-    "dias_com_chuva": 11,
+    "chuva_total_mm": 18.4,
+    "dias_com_chuva": 12,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 34.5,
-    "temp_min_periodo_c": 24.0,
+    "temp_max_periodo_c": 34.1,
+    "temp_min_periodo_c": 23.8,
     "temp_max_media_c": 33.1,
-    "umidade_media_pct": 89.7,
-    "vento_max_kmh": 20.5
+    "umidade_media_pct": 89.2,
+    "vento_max_kmh": 20.9
   },
   "ultimos_30_dias": {
-    "chuva_total_mm": 52.2,
-    "dias_com_chuva": 24,
+    "chuva_total_mm": 37.4,
+    "dias_com_chuva": 22,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
     "temp_max_periodo_c": 34.5,
     "temp_min_periodo_c": 23.2,
-    "temp_max_media_c": 32.9,
-    "umidade_media_pct": 92.3,
+    "temp_max_media_c": 33.0,
+    "umidade_media_pct": 90.3,
     "vento_max_kmh": 21.5
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-08-12",
-      "chuva_mm": 0.8,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-08-13",
-      "chuva_mm": 2.1,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-08-14",
-      "chuva_mm": 6.6,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-08-15",
-      "chuva_mm": 6.4,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-08-16",
-      "chuva_mm": 10.4,
-      "intensa": false,
-      "moderada": true,
-      "fraca": false
-    },
-    {
-      "data": "2026-08-17",
-      "chuva_mm": 4.8,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-08-18",
-      "chuva_mm": 3.2,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
     {
       "data": "2026-08-19",
       "chuva_mm": 4.9,
@@ -284,16 +235,65 @@
       "intensa": false,
       "moderada": false,
       "fraca": true
+    },
+    {
+      "data": "2026-09-17",
+      "chuva_mm": 2.1,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-09-18",
+      "chuva_mm": 0.9,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-09-19",
+      "chuva_mm": 0.7,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-09-20",
+      "chuva_mm": 3.3,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-09-21",
+      "chuva_mm": 0.5,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-09-22",
+      "chuva_mm": 0.6,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-09-23",
+      "chuva_mm": 0.4,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Cachoeira do Arari",
   "estado": "PA",
-  "atualizado_em": "2026-09-21T15:28:35.675158",
+  "atualizado_em": "2026-09-28T17:10:21.083076",
   "proxima_semana": {
-    "chuva_total_mm": 1.3,
-    "dias_com_chuva": 2,
-    "chuva_max_dia": 0.7,
+    "chuva_total_mm": 3.5,
+    "dias_com_chuva": 5,
+    "chuva_max_dia": 0.8,
     "temp_max_c": 35.1,
     "fonte": "Open-Meteo"
   }

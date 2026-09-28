@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 0.0,
-    "dias_com_chuva": 0,
+    "chuva_total_mm": 0.9,
+    "dias_com_chuva": 1,
     "dias_chuva_intensa": 0,
-    "pct_chuva_concentrada": 0,
-    "temp_max_periodo_c": 38.2,
-    "temp_min_periodo_c": 21.5,
-    "temp_max_media_c": 36.7,
-    "umidade_media_pct": 55.1,
-    "vento_max_kmh": 22.3
+    "pct_chuva_concentrada": 0.0,
+    "temp_max_periodo_c": 38.9,
+    "temp_min_periodo_c": 22.6,
+    "temp_max_media_c": 35.9,
+    "umidade_media_pct": 61.9,
+    "vento_max_kmh": 28.2
   },
   "ultimos_15_dias": {
-    "chuva_total_mm": 0.0,
-    "dias_com_chuva": 0,
+    "chuva_total_mm": 0.9,
+    "dias_com_chuva": 1,
     "dias_chuva_intensa": 0,
-    "pct_chuva_concentrada": 0,
-    "temp_max_periodo_c": 38.4,
+    "pct_chuva_concentrada": 0.0,
+    "temp_max_periodo_c": 38.9,
     "temp_min_periodo_c": 21.5,
-    "temp_max_media_c": 36.8,
-    "umidade_media_pct": 53.7,
-    "vento_max_kmh": 23.5
+    "temp_max_media_c": 36.2,
+    "umidade_media_pct": 58.5,
+    "vento_max_kmh": 28.2
   },
   "ultimos_30_dias": {
-    "chuva_total_mm": 0.0,
-    "dias_com_chuva": 0,
+    "chuva_total_mm": 0.9,
+    "dias_com_chuva": 1,
     "dias_chuva_intensa": 0,
-    "pct_chuva_concentrada": 0,
-    "temp_max_periodo_c": 38.4,
-    "temp_min_periodo_c": 20.8,
-    "temp_max_media_c": 36.1,
-    "umidade_media_pct": 57.1,
-    "vento_max_kmh": 23.5
+    "pct_chuva_concentrada": 0.0,
+    "temp_max_periodo_c": 38.9,
+    "temp_min_periodo_c": 21.2,
+    "temp_max_media_c": 36.3,
+    "umidade_media_pct": 56.8,
+    "vento_max_kmh": 28.2
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-08-12",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-08-13",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-08-14",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-08-15",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-08-16",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-08-17",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-08-18",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
     {
       "data": "2026-08-19",
       "chuva_mm": 0,
@@ -284,17 +235,66 @@
       "intensa": false,
       "moderada": false,
       "fraca": false
+    },
+    {
+      "data": "2026-09-17",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-09-18",
+      "chuva_mm": 0.9,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-09-19",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-09-20",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-09-21",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-09-22",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-09-23",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "São Raimundo Nonato",
   "estado": "PI",
-  "atualizado_em": "2026-09-21T15:28:35.675158",
+  "atualizado_em": "2026-09-28T17:10:21.083076",
   "proxima_semana": {
-    "chuva_total_mm": 0.6,
-    "dias_com_chuva": 1,
-    "chuva_max_dia": 0.6,
-    "temp_max_c": 39.3,
+    "chuva_total_mm": 0.0,
+    "dias_com_chuva": 0,
+    "chuva_max_dia": 0.0,
+    "temp_max_c": 38.7,
     "fonte": "Open-Meteo"
   }
 }
