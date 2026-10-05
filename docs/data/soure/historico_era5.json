@@ -1,86 +1,9 @@
 {
   "fonte": "Open-Meteo / ERA5",
-  "periodo_inicio": "2026-08-19",
-  "periodo_fim": "2026-09-23",
-  "coletado_em": "2026-09-28T17:11:25.860987",
+  "periodo_inicio": "2026-08-26",
+  "periodo_fim": "2026-09-30",
+  "coletado_em": "2026-10-05T17:35:37.988885",
   "dias": [
-    {
-      "data": "2026-08-19",
-      "chuva_mm": 1.8,
-      "temp_max_c": 30.5,
-      "temp_min_c": 25.1,
-      "umidade_max_pct": 95,
-      "umidade_min_pct": 65,
-      "vento_max_kmh": 21.4,
-      "radiacao_mj_m2": 22.2,
-      "evapotranspiracao_mm": 4.86
-    },
-    {
-      "data": "2026-08-20",
-      "chuva_mm": 4.7,
-      "temp_max_c": 30.8,
-      "temp_min_c": 26.3,
-      "umidade_max_pct": 89,
-      "umidade_min_pct": 67,
-      "vento_max_kmh": 21.5,
-      "radiacao_mj_m2": 23.04,
-      "evapotranspiracao_mm": 5.09
-    },
-    {
-      "data": "2026-08-21",
-      "chuva_mm": 4.1,
-      "temp_max_c": 30.0,
-      "temp_min_c": 26.1,
-      "umidade_max_pct": 87,
-      "umidade_min_pct": 69,
-      "vento_max_kmh": 20.6,
-      "radiacao_mj_m2": 22.94,
-      "evapotranspiracao_mm": 5.09
-    },
-    {
-      "data": "2026-08-22",
-      "chuva_mm": 3.5,
-      "temp_max_c": 30.1,
-      "temp_min_c": 25.5,
-      "umidade_max_pct": 91,
-      "umidade_min_pct": 69,
-      "vento_max_kmh": 20.1,
-      "radiacao_mj_m2": 23.25,
-      "evapotranspiracao_mm": 5.02
-    },
-    {
-      "data": "2026-08-23",
-      "chuva_mm": 0.9,
-      "temp_max_c": 30.4,
-      "temp_min_c": 26.5,
-      "umidade_max_pct": 81,
-      "umidade_min_pct": 66,
-      "vento_max_kmh": 18.8,
-      "radiacao_mj_m2": 23.91,
-      "evapotranspiracao_mm": 5.44
-    },
-    {
-      "data": "2026-08-24",
-      "chuva_mm": 5.2,
-      "temp_max_c": 30.5,
-      "temp_min_c": 24.2,
-      "umidade_max_pct": 97,
-      "umidade_min_pct": 60,
-      "vento_max_kmh": 16.4,
-      "radiacao_mj_m2": 20.89,
-      "evapotranspiracao_mm": 4.63
-    },
-    {
-      "data": "2026-08-25",
-      "chuva_mm": 5.4,
-      "temp_max_c": 30.6,
-      "temp_min_c": 24.1,
-      "umidade_max_pct": 99,
-      "umidade_min_pct": 64,
-      "vento_max_kmh": 20.3,
-      "radiacao_mj_m2": 22.65,
-      "evapotranspiracao_mm": 4.69
-    },
     {
       "data": "2026-08-26",
       "chuva_mm": 1.0,
@@ -399,6 +322,83 @@
       "vento_max_kmh": 20.3,
       "radiacao_mj_m2": 24.81,
       "evapotranspiracao_mm": 5.74
+    },
+    {
+      "data": "2026-09-24",
+      "chuva_mm": 0.2,
+      "temp_max_c": 30.9,
+      "temp_min_c": 26.9,
+      "umidade_max_pct": 81,
+      "umidade_min_pct": 63,
+      "vento_max_kmh": 21.8,
+      "radiacao_mj_m2": 24.3,
+      "evapotranspiracao_mm": 5.7
+    },
+    {
+      "data": "2026-09-25",
+      "chuva_mm": 0.2,
+      "temp_max_c": 30.6,
+      "temp_min_c": 26.4,
+      "umidade_max_pct": 83,
+      "umidade_min_pct": 60,
+      "vento_max_kmh": 20.4,
+      "radiacao_mj_m2": 23.54,
+      "evapotranspiracao_mm": 5.64
+    },
+    {
+      "data": "2026-09-26",
+      "chuva_mm": 0.1,
+      "temp_max_c": 31.8,
+      "temp_min_c": 26.5,
+      "umidade_max_pct": 84,
+      "umidade_min_pct": 59,
+      "vento_max_kmh": 19.4,
+      "radiacao_mj_m2": 25.15,
+      "evapotranspiracao_mm": 5.81
+    },
+    {
+      "data": "2026-09-27",
+      "chuva_mm": 5.2,
+      "temp_max_c": 31.0,
+      "temp_min_c": 24.8,
+      "umidade_max_pct": 97,
+      "umidade_min_pct": 65,
+      "vento_max_kmh": 21.7,
+      "radiacao_mj_m2": 23.78,
+      "evapotranspiracao_mm": 5.51
+    },
+    {
+      "data": "2026-09-28",
+      "chuva_mm": 1.6,
+      "temp_max_c": 30.7,
+      "temp_min_c": 26.0,
+      "umidade_max_pct": 90,
+      "umidade_min_pct": 66,
+      "vento_max_kmh": 20.3,
+      "radiacao_mj_m2": 25.13,
+      "evapotranspiracao_mm": 5.58
+    },
+    {
+      "data": "2026-09-29",
+      "chuva_mm": 1.1,
+      "temp_max_c": 31.0,
+      "temp_min_c": 26.5,
+      "umidade_max_pct": 85,
+      "umidade_min_pct": 61,
+      "vento_max_kmh": 18.1,
+      "radiacao_mj_m2": 25.66,
+      "evapotranspiracao_mm": 5.88
+    },
+    {
+      "data": "2026-09-30",
+      "chuva_mm": 1.0,
+      "temp_max_c": 30.9,
+      "temp_min_c": 26.0,
+      "umidade_max_pct": 89,
+      "umidade_min_pct": 64,
+      "vento_max_kmh": 23.9,
+      "radiacao_mj_m2": 25.24,
+      "evapotranspiracao_mm": 5.85
     }
   ]
 }

@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 8.5,
-    "dias_com_chuva": 5,
+    "chuva_total_mm": 5.7,
+    "dias_com_chuva": 2,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 34.1,
-    "temp_min_periodo_c": 23.8,
-    "temp_max_media_c": 33.2,
-    "umidade_media_pct": 89.1,
+    "temp_max_periodo_c": 34.7,
+    "temp_min_periodo_c": 24.8,
+    "temp_max_media_c": 34.2,
+    "umidade_media_pct": 91.4,
     "vento_max_kmh": 20.9
   },
   "ultimos_15_dias": {
-    "chuva_total_mm": 18.4,
-    "dias_com_chuva": 12,
+    "chuva_total_mm": 15.1,
+    "dias_com_chuva": 8,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 34.1,
+    "temp_max_periodo_c": 34.7,
     "temp_min_periodo_c": 23.8,
-    "temp_max_media_c": 33.1,
-    "umidade_media_pct": 89.2,
+    "temp_max_media_c": 33.7,
+    "umidade_media_pct": 90.2,
     "vento_max_kmh": 20.9
   },
   "ultimos_30_dias": {
-    "chuva_total_mm": 37.4,
-    "dias_com_chuva": 22,
+    "chuva_total_mm": 30.7,
+    "dias_com_chuva": 19,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 34.5,
-    "temp_min_periodo_c": 23.2,
-    "temp_max_media_c": 33.0,
-    "umidade_media_pct": 90.3,
-    "vento_max_kmh": 21.5
+    "temp_max_periodo_c": 34.7,
+    "temp_min_periodo_c": 23.8,
+    "temp_max_media_c": 33.4,
+    "umidade_media_pct": 90.0,
+    "vento_max_kmh": 20.9
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-08-19",
-      "chuva_mm": 4.9,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-08-20",
-      "chuva_mm": 4.2,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-08-21",
-      "chuva_mm": 3.7,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-08-22",
-      "chuva_mm": 1.4,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-08-23",
-      "chuva_mm": 2.1,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-08-24",
-      "chuva_mm": 3.8,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-08-25",
-      "chuva_mm": 4.1,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
     {
       "data": "2026-08-26",
       "chuva_mm": 4.2,
@@ -284,17 +235,66 @@
       "intensa": false,
       "moderada": false,
       "fraca": false
+    },
+    {
+      "data": "2026-09-24",
+      "chuva_mm": 0.2,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-09-25",
+      "chuva_mm": 0.1,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-09-26",
+      "chuva_mm": 0.2,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-09-27",
+      "chuva_mm": 3.4,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-09-28",
+      "chuva_mm": 1.0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-09-29",
+      "chuva_mm": 0.3,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-09-30",
+      "chuva_mm": 0.5,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Cachoeira do Arari",
   "estado": "PA",
-  "atualizado_em": "2026-09-28T17:10:21.083076",
+  "atualizado_em": "2026-10-05T17:34:57.279758",
   "proxima_semana": {
-    "chuva_total_mm": 3.5,
-    "dias_com_chuva": 5,
-    "chuva_max_dia": 0.8,
-    "temp_max_c": 35.1,
+    "chuva_total_mm": 4.4,
+    "dias_com_chuva": 2,
+    "chuva_max_dia": 2.9,
+    "temp_max_c": 34.4,
     "fonte": "Open-Meteo"
   }
 }
