@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 2.0,
+    "chuva_total_mm": 1.7,
     "dias_com_chuva": 1,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
     "temp_max_periodo_c": 31.4,
-    "temp_min_periodo_c": 25.7,
-    "temp_max_media_c": 30.8,
-    "umidade_media_pct": 82.3,
-    "vento_max_kmh": 26.2
+    "temp_min_periodo_c": 25.5,
+    "temp_max_media_c": 31.0,
+    "umidade_media_pct": 84.4,
+    "vento_max_kmh": 23.9
   },
   "ultimos_15_dias": {
-    "chuva_total_mm": 3.5,
+    "chuva_total_mm": 3.7,
     "dias_com_chuva": 2,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
     "temp_max_periodo_c": 31.4,
-    "temp_min_periodo_c": 25.7,
-    "temp_max_media_c": 30.7,
-    "umidade_media_pct": 81.9,
+    "temp_min_periodo_c": 25.5,
+    "temp_max_media_c": 30.9,
+    "umidade_media_pct": 83.1,
     "vento_max_kmh": 26.2
   },
   "ultimos_30_dias": {
-    "chuva_total_mm": 24.2,
-    "dias_com_chuva": 10,
+    "chuva_total_mm": 18.2,
+    "dias_com_chuva": 9,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 31.8,
-    "temp_min_periodo_c": 24.7,
+    "temp_max_periodo_c": 31.4,
+    "temp_min_periodo_c": 25.1,
     "temp_max_media_c": 30.7,
-    "umidade_media_pct": 84.0,
+    "umidade_media_pct": 83.6,
     "vento_max_kmh": 26.2
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-09-16",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-09-17",
-      "chuva_mm": 0.1,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-09-18",
-      "chuva_mm": 0.1,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-09-19",
-      "chuva_mm": 3.7,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-09-20",
-      "chuva_mm": 0.4,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-09-21",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-09-22",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
     {
       "data": "2026-09-23",
       "chuva_mm": 0.4,
@@ -284,17 +235,66 @@
       "intensa": false,
       "moderada": false,
       "fraca": false
+    },
+    {
+      "data": "2026-10-22",
+      "chuva_mm": 0.5,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-10-23",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-10-24",
+      "chuva_mm": 0.1,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-10-25",
+      "chuva_mm": 0.7,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-10-26",
+      "chuva_mm": 0.1,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-10-27",
+      "chuva_mm": 0.3,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-10-28",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Soure",
   "estado": "PA",
-  "atualizado_em": "2026-10-26T15:37:33.587191",
+  "atualizado_em": "2026-11-02T18:58:05.160376",
   "proxima_semana": {
-    "chuva_total_mm": 2.2,
-    "dias_com_chuva": 1,
-    "chuva_max_dia": 1.8,
-    "temp_max_c": 32.4,
+    "chuva_total_mm": 3.6,
+    "dias_com_chuva": 3,
+    "chuva_max_dia": 2.0,
+    "temp_max_c": 31.9,
     "fonte": "Open-Meteo"
   }
 }
