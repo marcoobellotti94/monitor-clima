@@ -1,87 +1,38 @@
 {
   "ultimos_7_dias": {
-    "chuva_total_mm": 6.3,
+    "chuva_total_mm": 5.7,
     "dias_com_chuva": 3,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
     "temp_max_periodo_c": 31.4,
-    "temp_min_periodo_c": 25.4,
-    "temp_max_media_c": 30.9,
-    "umidade_media_pct": 82.7,
-    "vento_max_kmh": 23.9
+    "temp_min_periodo_c": 25.9,
+    "temp_max_media_c": 31.0,
+    "umidade_media_pct": 82.1,
+    "vento_max_kmh": 24.6
   },
   "ultimos_15_dias": {
-    "chuva_total_mm": 8.0,
-    "dias_com_chuva": 4,
-    "dias_chuva_intensa": 0,
-    "pct_chuva_concentrada": 0.0,
-    "temp_max_periodo_c": 31.4,
-    "temp_min_periodo_c": 25.4,
-    "temp_max_media_c": 30.9,
-    "umidade_media_pct": 83.4,
-    "vento_max_kmh": 26.2
-  },
-  "ultimos_30_dias": {
-    "chuva_total_mm": 11.5,
+    "chuva_total_mm": 12.0,
     "dias_com_chuva": 6,
     "dias_chuva_intensa": 0,
     "pct_chuva_concentrada": 0.0,
     "temp_max_periodo_c": 31.4,
     "temp_min_periodo_c": 25.4,
-    "temp_max_media_c": 30.8,
+    "temp_max_media_c": 31.0,
+    "umidade_media_pct": 82.7,
+    "vento_max_kmh": 24.6
+  },
+  "ultimos_30_dias": {
+    "chuva_total_mm": 15.7,
+    "dias_com_chuva": 8,
+    "dias_chuva_intensa": 0,
+    "pct_chuva_concentrada": 0.0,
+    "temp_max_periodo_c": 31.4,
+    "temp_min_periodo_c": 25.4,
+    "temp_max_media_c": 30.9,
     "umidade_media_pct": 82.7,
     "vento_max_kmh": 26.2
   },
   "distribuicao_diaria": [
-    {
-      "data": "2026-09-30",
-      "chuva_mm": 1.0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-10-01",
-      "chuva_mm": 1.6,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-10-02",
-      "chuva_mm": 2.5,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-10-03",
-      "chuva_mm": 0.3,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
-    {
-      "data": "2026-10-04",
-      "chuva_mm": 3.6,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-10-05",
-      "chuva_mm": 2.9,
-      "intensa": false,
-      "moderada": false,
-      "fraca": true
-    },
-    {
-      "data": "2026-10-06",
-      "chuva_mm": 0,
-      "intensa": false,
-      "moderada": false,
-      "fraca": false
-    },
     {
       "data": "2026-10-07",
       "chuva_mm": 0.6,
@@ -284,17 +235,60 @@
       "intensa": false,
       "moderada": false,
       "fraca": false
+    },
+    {
+      "data": "2026-11-05",
+      "chuva_mm": 0.1,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-11-06",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-11-07",
+      "chuva_mm": 0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-11-08",
+      "chuva_mm": 1.6,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-11-09",
+      "chuva_mm": 0.1,
+      "intensa": false,
+      "moderada": false,
+      "fraca": false
+    },
+    {
+      "data": "2026-11-10",
+      "chuva_mm": 1.9,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
+    },
+    {
+      "data": "2026-11-11",
+      "chuva_mm": 2.0,
+      "intensa": false,
+      "moderada": false,
+      "fraca": true
     }
   ],
   "fonte_historico": "Open-Meteo / ERA5",
   "localidade": "Salvaterra",
   "estado": "PA",
-  "atualizado_em": "2026-11-09T19:19:45.845931",
-  "proxima_semana": {
-    "chuva_total_mm": 6.2,
-    "dias_com_chuva": 3,
-    "chuva_max_dia": 2.9,
-    "temp_max_c": 31.9,
-    "fonte": "Open-Meteo"
-  }
+  "atualizado_em": "2026-11-16T19:02:56.431475",
+  "proxima_semana": {}
 }
